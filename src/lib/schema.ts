@@ -8,9 +8,8 @@ export function generateJsonLd(locale: string) {
 
   const currentJob = experience[0];
   const allSkills = [
-    ...skills.advanced.map((s) => s.name),
-    ...skills.intermediate.map((s) => s.name),
-    ...skills.earlierCareer,
+    ...skills.now,
+    ...skills.earlier,
   ];
 
   return {
@@ -58,7 +57,7 @@ export function generateJsonLd(locale: string) {
           '@type': 'EducationalOccupationalCredential',
           name: cert.name,
           ...(cert.issuer ? { recognizedBy: { '@type': 'Organization', name: cert.issuer } } : {}),
-          ...(cert.year ? { dateCreated: cert.year } : {}),
+          ...(cert.issuedAt ? { dateCreated: cert.issuedAt } : {}),
         })),
       },
     ],

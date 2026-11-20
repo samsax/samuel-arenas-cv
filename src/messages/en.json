@@ -6,7 +6,7 @@
     "printCV": "Print CV"
   },
   "header": {
-    "location": "La Ceja, Antioquia, Colombia",
+    "location": "La Ceja, Colombia · 8:00 a.m.–5:00 p.m. COT (UTC−5) · Flexible for US Eastern overlap",
     "email": "Email",
     "phone": "Phone",
     "linkedin": "LinkedIn",
@@ -16,20 +16,15 @@
   "sections": {
     "summary": "Professional Summary",
     "experience": "Professional Experience",
-    "skills": "Technical Skills Matrix",
-    "certifications": "Certifications",
+    "skills": "Skills",
+    "certifications": "Courses & Certificates",
     "education": "Education",
     "languages": "Languages",
     "hobbies": "Interests & Hobbies"
   },
   "skills": {
-    "advancedTitle": "Advanced (4+ Years / Production Backed)",
-    "advancedSubtitle": "Core production stack supporting high-traffic Hubs platform and services",
-    "intermediateTitle": "Intermediate (1–3 Years / Active Production)",
-    "intermediateSubtitle": "Distributed systems, streaming, infrastructure and reliability tools",
-    "earlierTitle": "Earlier Career & Broad Foundations",
-    "earlierSubtitle": "Pre-Procore production, research initiatives, and academic experience",
-    "years": "{count, plural, =1 {1 year} other {# years}}"
+    "nowTitle": "Now",
+    "earlierTitle": "Earlier"
   },
   "experience": {
     "present": "Present",

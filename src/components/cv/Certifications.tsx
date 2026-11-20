@@ -8,7 +8,7 @@ interface CertificationsProps {
 
 export function Certifications({ locale }: CertificationsProps) {
   const isEs = locale === 'es';
-  const sectionTitle = isEs ? 'Certificaciones' : 'Certifications';
+  const sectionTitle = isEs ? 'Cursos y certificados' : 'Courses & Certificates';
 
   return (
     <Section id="certifications" title={sectionTitle}>
@@ -23,9 +23,11 @@ export function Certifications({ locale }: CertificationsProps) {
               <span className="font-semibold text-zinc-900 block leading-tight">
                 {cert.name}
               </span>
-              {(cert.issuer || cert.year) && (
+              {(cert.issuer || cert.issuedAt) && (
                 <span className="text-xs text-zinc-500 mt-0.5 block">
-                  {[cert.issuer, cert.year].filter(Boolean).join(' • ')}
+                  {[cert.issuer, cert.issuedAt && formatIssueDate(cert.issuedAt, locale)]
+                    .filter(Boolean)
+                    .join(' • ')}
                 </span>
               )}
             </div>
@@ -34,4 +36,15 @@ export function Certifications({ locale }: CertificationsProps) {
       </ul>
     </Section>
   );
+}
+
+function formatIssueDate(issuedAt: string, locale: string) {
+  const [year, month] = issuedAt.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, 1));
+
+  return new Intl.DateTimeFormat(locale === 'es' ? 'es-CO' : 'en-US', {
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(date);
 }

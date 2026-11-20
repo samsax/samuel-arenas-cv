@@ -6,7 +6,7 @@
     "printCV": "Imprimir CV"
   },
   "header": {
-    "location": "La Ceja, Antioquia, Colombia",
+    "location": "La Ceja, Colombia · 8:00 a. m.–5:00 p. m. COT (UTC−5) · Flexibilidad para coincidir con el horario del Este de EE. UU.",
     "email": "Correo",
     "phone": "Teléfono",
     "linkedin": "LinkedIn",
@@ -16,20 +16,15 @@
   "sections": {
     "summary": "Resumen Profesional",
     "experience": "Experiencia Profesional",
-    "skills": "Matriz de Habilidades Técnicas",
-    "certifications": "Certificaciones",
+    "skills": "Habilidades",
+    "certifications": "Cursos y certificados",
     "education": "Educación",
     "languages": "Idiomas",
     "hobbies": "Intereses y Pasatiempos"
   },
   "skills": {
-    "advancedTitle": "Avanzado (4+ Años / Respaldado en Producción)",
-    "advancedSubtitle": "Stack de producción principal en la plataforma y servicios de Hubs",
-    "intermediateTitle": "Intermedio (1–3 Años / Producción Activa)",
-    "intermediateSubtitle": "Sistemas distribuidos, streaming, infraestructura y herramientas de confiabilidad",
-    "earlierTitle": "Trayectoria Previa y Fundamentos",
-    "earlierSubtitle": "Experiencia en producción pre-Procore, investigación y formación académica",
-    "years": "{count, plural, =1 {1 año} other {# años}}"
+    "nowTitle": "Actuales",
+    "earlierTitle": "Experiencia previa"
   },
   "experience": {
     "present": "Presente",
