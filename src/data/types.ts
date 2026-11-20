@@ -6,9 +6,8 @@ export interface CVData {
   };
   experience: ExperienceItem[];
   skills: {
-    advanced: SkillItem[];
-    intermediate: SkillItem[];
-    earlierCareer: string[];
+    now: string[];
+    earlier: string[];
   };
   certifications: Certification[];
   education: Education;
@@ -58,16 +57,10 @@ export interface Role {
   endDate: string;
 }
 
-export interface SkillItem {
-  name: string;
-  years: number;
-  highlight?: string;
-}
-
 export interface Certification {
   name: string;
   issuer?: string;
-  year?: string;
+  issuedAt?: string;
 }
 
 export interface Education {
