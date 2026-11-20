@@ -18,8 +18,7 @@
     "skills": "Skills",
     "certifications": "Courses & Certificates",
     "education": "Education",
-    "languages": "Languages",
-    "hobbies": "Interests & Hobbies"
+    "languages": "Languages"
   },
   "skills": {
     "nowTitle": "Now",
@@ -27,8 +26,6 @@
   },
   "experience": {
     "present": "Present",
-    "client": "Client",
-    "team": "Team",
     "keyAchievements": "Key Contributions & Impact"
   },
   "education": {
@@ -36,6 +33,6 @@
   },
   "footer": {
     "copyright": "© {year} Samuel David Arenas Pareja. All rights reserved.",
-    "builtWith": "Designed with Next.js 16 (App Router), Tailwind CSS & optimized for AI discovery."
+    "builtWith": "Built with Next.js 16 (App Router) and Tailwind CSS."
   }
 }

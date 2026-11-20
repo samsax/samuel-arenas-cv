@@ -1,3 +1,6 @@
+export type YearMonth = `${number}-${number}`;
+export type RoleEndDate = YearMonth | 'present';
+
 export interface CVData {
   personal: PersonalInfo;
   summary: {
@@ -12,10 +15,6 @@ export interface CVData {
   certifications: Certification[];
   education: Education;
   languages: Language[];
-  hobbies: {
-    en: string[];
-    es: string[];
-  };
 }
 
 export interface PersonalInfo {
@@ -24,7 +23,6 @@ export interface PersonalInfo {
     en: string;
     es: string;
   };
-  location: string;
   email: string;
   phone: string;
   linkedin: string;
@@ -33,8 +31,6 @@ export interface PersonalInfo {
 
 export interface ExperienceItem {
   company: string;
-  client?: string;
-  team?: string;
   location: string;
   roles: Role[];
   overview?: {
@@ -52,14 +48,14 @@ export interface Role {
     en: string;
     es: string;
   };
-  startDate: string;
-  endDate: string;
+  startDate: YearMonth;
+  endDate: RoleEndDate;
 }
 
 export interface Certification {
   name: string;
   issuer?: string;
-  issuedAt?: string;
+  issuedAt?: YearMonth;
 }
 
 export interface Education {
@@ -68,7 +64,8 @@ export interface Education {
     es: string;
   };
   institution: string;
-  period: string;
+  startDate: YearMonth;
+  endDate: YearMonth;
 }
 
 export interface Language {

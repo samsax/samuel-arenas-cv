@@ -6,7 +6,7 @@
     "printCV": "Imprimir CV"
   },
   "header": {
-    "location": "La Ceja, Colombia · 8:00 a. m.–5:00 p. m. COT (UTC−5) · Flexibilidad para coincidir con el horario del Este de EE. UU.",
+    "location": "La Ceja, Colombia · 8:00 a. m.–5:00 p. m. COT (UTC−5) · Flexible para horario del Este de EE. UU.",
     "email": "Correo",
     "phone": "Teléfono",
     "linkedin": "LinkedIn",
@@ -18,8 +18,7 @@
     "skills": "Habilidades",
     "certifications": "Cursos y certificados",
     "education": "Educación",
-    "languages": "Idiomas",
-    "hobbies": "Intereses y Pasatiempos"
+    "languages": "Idiomas"
   },
   "skills": {
     "nowTitle": "Actuales",
@@ -27,8 +26,6 @@
   },
   "experience": {
     "present": "Presente",
-    "client": "Cliente",
-    "team": "Equipo",
     "keyAchievements": "Contribuciones Clave e Impacto"
   },
   "education": {
@@ -36,6 +33,6 @@
   },
   "footer": {
     "copyright": "© {year} Samuel David Arenas Pareja. Todos los derechos reservados.",
-    "builtWith": "Diseñado con Next.js 16 (App Router), Tailwind CSS y optimizado para agentes de IA."
+    "builtWith": "Desarrollado con Next.js 16 (App Router) y Tailwind CSS."
   }
 }

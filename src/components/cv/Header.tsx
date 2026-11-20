@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { cvData } from '@/data/cv-data';
 
 interface HeaderProps {
@@ -7,6 +8,7 @@ interface HeaderProps {
 
 export function Header({ locale }: HeaderProps) {
   const isEs = locale === 'es';
+  const t = useTranslations('header');
   const { personal } = cvData;
   const title = isEs ? personal.title.es : personal.title.en;
 
@@ -20,22 +22,20 @@ export function Header({ locale }: HeaderProps) {
       </p>
 
       <div className="flex flex-wrap justify-center items-center gap-y-2 gap-x-4 text-sm text-zinc-600">
-        <span className="inline-flex items-center gap-1.5">
-          <span>📍</span> {personal.location}
-        </span>
+        <span>{t('location')}</span>
         <span className="text-zinc-300 hidden sm:inline">•</span>
         <a
           href={`mailto:${personal.email}`}
           className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
         >
-          <span>✉️</span> {personal.email}
+          {personal.email}
         </a>
         <span className="text-zinc-300 hidden sm:inline">•</span>
         <a
           href={`tel:${personal.phone.replace(/\s+/g, '')}`}
           className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
         >
-          <span>📞</span> {personal.phone}
+          {personal.phone}
         </a>
       </div>
 
@@ -46,7 +46,7 @@ export function Header({ locale }: HeaderProps) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 hover:bg-blue-50 text-zinc-700 hover:text-blue-700 font-medium transition-colors border border-zinc-200"
         >
-          <span>🔗</span> LinkedIn
+          LinkedIn
         </a>
         <a
           href={personal.githubPersonal}
@@ -54,7 +54,7 @@ export function Header({ locale }: HeaderProps) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 hover:bg-blue-50 text-zinc-700 hover:text-blue-700 font-medium transition-colors border border-zinc-200"
         >
-          <span>💻</span> GitHub (Personal)
+          GitHub
         </a>
       </div>
     </header>

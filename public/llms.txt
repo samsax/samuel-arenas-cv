@@ -1,86 +1,60 @@
 # Samuel David Arenas Pareja — Senior Software Engineer
 
-## Professional Summary
-Senior Software Engineer with 8+ years of production experience specializing in scalable web applications, distributed microservices, and cloud architectures. Currently building core platform surfaces at Procore (Hubs team) via FullStack Labs, shipping high-impact features across React, Next.js, Ruby on Rails (Cornerstone monolith), and AWS. Proven track record leading authorization migrations, high-scale event streaming with Apache Kafka, micro-frontend (MFE) modularization, and WCAG 2.1 accessibility compliance.
+## Summary
 
-## Contact Information
-- Location: La Ceja, Antioquia, Colombia
+Senior software engineer with 10 years of experience, contracted through FullStack Labs to a US construction-technology platform. Promoted from mid-level to senior in April 2024. I work on company and project home for construction teams, first on onboarding services and, since June 2025, on company and project home surfaces.
+
+## Contact
+
+- Location: La Ceja, Colombia · 8:00 a.m.–5:00 p.m. COT (UTC−5) · Flexible for US Eastern overlap
 - Email: samuelsaxofon@gmail.com
 - Phone: +57 3017463071
 - LinkedIn: https://www.linkedin.com/in/samuel-arenas-pareja
-- GitHub (Personal): https://github.com/samsax
-- GitHub (Professional): https://github.com/samuelfsl
-- Web Portfolio: https://samuel-arenas-cv.vercel.app
+- GitHub: https://github.com/samsax
+- CV: https://samuel-arenas-cv.vercel.app
 
----
+## Skills
 
-## Technical Skills Matrix (Calibrated by Tenure & Evidence)
-
-### Advanced (4+ Years / Procore-Backed Production Work)
-- **Frontend & Core:** React (4 yrs), JavaScript ES6+ (4 yrs), Micro-frontends / MFE (2 yrs), HTML5 (4 yrs)
-- **Backend & Cloud:** REST APIs (4 yrs), AWS (S3, Lambda, CloudFormation) (4 yrs), DynamoDB (3 yrs)
-- **Tooling & Agile:** Git & GitHub (4 yrs), Jira (4 yrs), LaunchDarkly Feature Flags (3 yrs)
-
-### Intermediate (1–3 Years / Active Production Work)
-- **Event Streaming & Infrastructure:** Apache Kafka (3 yrs - Outbox pattern, Kafka Connect), Docker (3 yrs), Helm (3 yrs), DevOps practices (2 yrs), YAML config (1 yr)
-- **Languages & Frameworks:** TypeScript (2 yrs), Node.js (2 yrs), Ruby on Rails (2 yrs - Controllers, Evaluators)
-- **Quality & Standards:** WCAG 2.1 Accessibility (1 yr - screen readers, keyboard navigation), Jest & React Testing Library (3 yrs)
-
-### Earlier Career & Academic Foundations (Pre-Procore / Research)
-- Python, Django, Flask, Firebase, PostgreSQL, MySQL, MongoDB, PHP, Java (Spring Boot / Android), Kotlin, Vue.js, NestJS, SQLite
-
----
+- Now: React, TypeScript, Next.js, Ruby on Rails, Node.js, Kafka, DynamoDB, AWS, LaunchDarkly
+- Earlier: Kotlin, Java/Android, Vue.js, PostgreSQL, PHP
 
 ## Professional Experience
 
-### FullStack Labs (Remote, USA Contractor)
-**Client:** Procore Technologies | **Team:** Hubs Team
-- **Senior Software Engineer — Hubs** (April 2024 – Present)
-- **Mid-Level Software Engineer** (January 2022 – April 2024)
+### FullStack Labs
 
-**Context:** Building the company and project home across the hubs microservice, the hubs UI, and the Cornerstone monolith. Covers authorization for personal and published views, card-library visibility, LaunchDarkly feature flags, portfolio/home settings, analytics, and API performance.
+Contracted to a US construction-technology platform. Remote, Colombia.
 
-**Key Contributions:**
-1. **Authorization & Permissions Migration:** Migrated permissions client from full permissions manifest to Cornerstone’s domain operations API, enabling fast checks for named actions (view hubs, manage personal views, publish views, manage containers) and staying within strict latency targets for view and container routes.
-2. **Micro-frontends & Web Apps:** Architected company and project home pages using React, Next.js, and micro-frontend patterns for high modularity and uptime.
-3. **Event Streaming:** Implemented asynchronous event pipelines using Apache Kafka (Outbox pattern and Kafka Connect) across Onboarding and Hubs services to guarantee event consistency.
-4. **Accessibility (a11y):** Authored 20+ keyboard navigation, ARIA role, and screen-reader accessibility fixes aligning strictly with WCAG 2.1 standards.
-5. **Entitlements & Onboarding:** Implemented entitlement management and sandbox onboarding solutions using Node.js and DynamoDB.
-6. **Testing & Quality:** Maintained high test coverage with unit/integration test suites using Jest and React Testing Library.
-7. **AI Innovation:** Collaborated on an award-winning AI agent during an internal hackathon in 2025, utilizing Python, AWS, and OpenAI APIs.
+- Senior Software Engineer (April 2024–Present)
+- Mid-Level Software Engineer (January 2022–April 2024)
 
-### DataHome, S. de R.L. de C.V. (Villahermosa, Tabasco, México)
-- **Senior Software Engineer** (March 2019 – December 2021)
-- **Junior Software Developer** (January 2017 – March 2019)
-- **Developer Intern** (June 2016 – December 2016)
-- Developed Android applications for drivers and passengers using Kotlin, Java, and Firebase.
-- Built data-driven reporting dashboards using React, Node.js, and PostgreSQL.
-- Optimized third-party REST API integrations in Node.js.
-- Led modernization migrating legacy monolithic systems from PHP to Vue.js and Node.js.
+Worked on onboarding services through mid-2025, then on company and project home surfaces.
 
-### Grupo de Investigación Ingeniería y Software (GIIS) — UdeA (Medellín, Colombia)
-- **Research Assistant** (August 2015 – June 2016)
-- Developed "MyVitalBox: Nutrición" mobile app with Java, Android SDK, and SQLite.
-- Implemented scientific algorithms for calorie and nutrition intake calculation.
+1. Shipped an in-app toggle between a legacy portfolio experience and company/project home across a Ruby on Rails monolith and React UI. Implemented the admin API and authorization, shared eligibility and redirects, configuration defaults, and a confirmation step before bulk project-home updates.
+2. Built company and project home UI in React 18, TypeScript, and Next.js; delivered default project routing, project-information and open-items cards, and the project team panel. Configured feature-flag beta segments for production and sandbox.
+3. Moved company-home views to a service API using Node.js/NestJS and AWS DynamoDB Streams. Seeded default company, project, and development containers and emitted outbox events through Kafka Connect to Databricks; removed legacy cutover flags after rollout.
+4. Improved keyboard access and screen-reader behavior across portfolio, safety, and project-home screens, including tab navigation and roles, keyboard use of notes actions, and weather announcements.
 
----
+### DataHome, S. de R.L. de C.V.
+
+DataHome provided software and infrastructure for a trip service used by drivers, passengers, and transport companies, earning a small fee per trip.
+
+- Senior Software Engineer (March 2019–December 2021)
+- Junior Software Developer (January 2017–March 2019)
+- Developer Intern (June 2016–December 2016)
+- Built the Android app for drivers and passengers, first in Java and later in Kotlin; developed the trip-platform dashboard with Vue.js and PostgreSQL.
+- Reorganized PHP web-service logic from one large file into a multi-file Zend Framework backend; made technical decisions on a four-person team.
+
+### Grupo de Investigación Ingeniería y Software (GIIS) — UdeA
+
+- Research Assistant (August 2015–June 2016)
+- Developed an Android application for personalized nutrition tracking using Java, Android SDK, and SQLite.
+- Implemented calorie and macronutrient calculation algorithms based on scientific literature and healthcare guidelines.
 
 ## Education
-- **Degree:** Bachelor's Degree in Systems Engineering
-- **Institution:** Universidad de Antioquia (UdeA), Colombia
-- **Period:** March 2012 – September 2017
 
----
-
-## Certifications
-- Claude Code in Action (Anthropic, 2025)
-- Curso de Introducción a los Negocios Online en Ecommerce (Platzi)
-- Curso de Técnicas de Negociación (Platzi)
-- Curso de Bitcoin y Blockchain 2017 (Platzi, 2017)
-- Curso de Liderazgo para Equipos de Trabajo (Platzi)
-
----
+- Bachelor's Degree in Systems Engineering, Universidad de Antioquia (UdeA) (March 2012–September 2017)
 
 ## Languages
+
 - Spanish: Native
 - English: Professional Working Proficiency
