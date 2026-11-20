@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "switchLanguage": "Español",
+    "downloadCV": "Download PDF",
+    "printCV": "Print CV"
+  },
+  "header": {
+    "location": "La Ceja, Antioquia, Colombia",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "githubPersonal": "GitHub (Personal)",
+    "githubProfessional": "GitHub (Professional)"
+  },
+  "sections": {
+    "summary": "Professional Summary",
+    "experience": "Professional Experience",
+    "skills": "Technical Skills Matrix",
+    "certifications": "Certifications",
+    "education": "Education",
+    "languages": "Languages",
+    "hobbies": "Interests & Hobbies"
+  },
+  "skills": {
+    "advancedTitle": "Advanced (4+ Years / Production Backed)",
+    "advancedSubtitle": "Core production stack supporting high-traffic Hubs platform and services",
+    "intermediateTitle": "Intermediate (1–3 Years / Active Production)",
+    "intermediateSubtitle": "Distributed systems, streaming, infrastructure and reliability tools",
+    "earlierTitle": "Earlier Career & Broad Foundations",
+    "earlierSubtitle": "Pre-Procore production, research initiatives, and academic experience",
+    "years": "{count, plural, =1 {1 year} other {# years}}"
+  },
+  "experience": {
+    "present": "Present",
+    "client": "Client",
+    "team": "Team",
+    "keyAchievements": "Key Contributions & Impact"
+  },
+  "education": {
+    "institution": "Universidad de Antioquia (UdeA)"
+  },
+  "footer": {
+    "copyright": "© {year} Samuel David Arenas Pareja. All rights reserved.",
+    "builtWith": "Designed with Next.js 16 (App Router), Tailwind CSS & optimized for AI discovery."
+  }
+}

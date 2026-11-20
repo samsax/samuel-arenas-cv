@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "switchLanguage": "English",
+    "downloadCV": "Descargar PDF",
+    "printCV": "Imprimir CV"
+  },
+  "header": {
+    "location": "La Ceja, Antioquia, Colombia",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "linkedin": "LinkedIn",
+    "githubPersonal": "GitHub (Personal)",
+    "githubProfessional": "GitHub (Profesional)"
+  },
+  "sections": {
+    "summary": "Resumen Profesional",
+    "experience": "Experiencia Profesional",
+    "skills": "Matriz de Habilidades Técnicas",
+    "certifications": "Certificaciones",
+    "education": "Educación",
+    "languages": "Idiomas",
+    "hobbies": "Intereses y Pasatiempos"
+  },
+  "skills": {
+    "advancedTitle": "Avanzado (4+ Años / Respaldado en Producción)",
+    "advancedSubtitle": "Stack de producción principal en la plataforma y servicios de Hubs",
+    "intermediateTitle": "Intermedio (1–3 Años / Producción Activa)",
+    "intermediateSubtitle": "Sistemas distribuidos, streaming, infraestructura y herramientas de confiabilidad",
+    "earlierTitle": "Trayectoria Previa y Fundamentos",
+    "earlierSubtitle": "Experiencia en producción pre-Procore, investigación y formación académica",
+    "years": "{count, plural, =1 {1 año} other {# años}}"
+  },
+  "experience": {
+    "present": "Presente",
+    "client": "Cliente",
+    "team": "Equipo",
+    "keyAchievements": "Contribuciones Clave e Impacto"
+  },
+  "education": {
+    "institution": "Universidad de Antioquia (UdeA)"
+  },
+  "footer": {
+    "copyright": "© {year} Samuel David Arenas Pareja. Todos los derechos reservados.",
+    "builtWith": "Diseñado con Next.js 16 (App Router), Tailwind CSS y optimizado para agentes de IA."
+  }
+}

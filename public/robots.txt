@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# LLM & AI Discovery
+Allow: /llms.txt
+
+Sitemap: https://samuel-arenas-cv.vercel.app/sitemap.xml
