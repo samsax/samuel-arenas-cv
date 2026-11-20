@@ -19,7 +19,6 @@ export function Languages({ locale }: LanguagesProps) {
             className="flex items-center justify-between p-3 rounded-lg border border-zinc-200 bg-white"
           >
             <div className="flex items-center gap-2">
-              <span>🌐</span>
               <span className="font-semibold text-sm text-zinc-900">
                 {isEs ? lang.name.es : lang.name.en}
               </span>

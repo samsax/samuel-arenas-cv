@@ -1,19 +1,19 @@
 # 📄 Samuel David Arenas Pareja — Senior Software Engineer CV & Portfolio
 
-> Modern, high-performance portfolio and CV website built with **Next.js 16 (App Router, SSR)**, **Tailwind CSS**, and **next-intl**. Designed specifically for high-speed recruitment, ATS parsing, and discovery by modern AI search agents.
+> Bilingual portfolio and CV website built with **Next.js 16 (App Router, SSR)**, **Tailwind CSS**, and **next-intl**. Designed for recruiter readability, localized content, and print-ready CVs.
 
 ---
 
 ## 🚀 Key Highlights & Architectural Features
 
 - **🌐 Internationalization (i18n):** Native support for English (`/en`) and Spanish (`/es`) via `next-intl` with automatic redirection and route localization.
-- **🤖 AI Recruitment Optimization:**
-  - Semantic HTML5 document structure with accessibility landmarks.
-  - Rich **Schema.org JSON-LD** graph (`Person` + `ProfilePage`) for knowledge graph ingestion.
-  - Dedicated `/llms.txt` file for rapid ingestion by LLM-powered hiring tools.
-  - Clean Server-Side Rendering (SSR) ensuring text visibility to scrapers without client-side hydration delays.
+- **Searchable CV metadata:**
+  - Semantic HTML document structure with accessibility landmarks.
+  - **Schema.org JSON-LD** (`Person` + `ProfilePage`) generated from the CV data.
+  - A public plain-text CV summary at `/llms.txt`.
+  - Static rendering keeps CV content available to search and recruiting tools.
 - **🖨️ Print & PDF Ready:** Integrated clean printable stylesheet that removes web elements and formats cleanly to an ATS-ready document.
-- **🛠️ Calibrated Skills Matrix:** Accurately categorized by production evidence, tenure, and verified Procore Hubs platform work.
+- **🛠️ Evidence-based skills:** Current and earlier-career skills are grouped without unsupported year counts.
 
 ---
 
@@ -33,7 +33,7 @@
 ```
 samuel-arenas-cv/
 ├── public/
-│   ├── llms.txt               # LLM ingestion summary
+│   ├── llms.txt               # Public plain-text CV summary
 │   └── robots.txt             # Search crawler instructions
 ├── src/
 │   ├── app/
