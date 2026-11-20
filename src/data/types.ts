@@ -29,7 +29,6 @@ export interface PersonalInfo {
   phone: string;
   linkedin: string;
   githubPersonal: string;
-  githubProfessional: string;
 }
 
 export interface ExperienceItem {

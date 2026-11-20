@@ -10,8 +10,7 @@
     "email": "Email",
     "phone": "Phone",
     "linkedin": "LinkedIn",
-    "githubPersonal": "GitHub (Personal)",
-    "githubProfessional": "GitHub (Professional)"
+    "githubPersonal": "GitHub"
   },
   "sections": {
     "summary": "Professional Summary",

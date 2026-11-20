@@ -12,7 +12,6 @@ export const cvData: CVData = {
     phone: '+57 3017463071',
     linkedin: 'https://www.linkedin.com/in/samuel-arenas-pareja',
     githubPersonal: 'https://github.com/samsax',
-    githubProfessional: 'https://github.com/samuelfsl',
   },
 
   summary: {

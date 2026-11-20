@@ -56,14 +56,6 @@ export function Header({ locale }: HeaderProps) {
         >
           <span>💻</span> GitHub (Personal)
         </a>
-        <a
-          href={personal.githubProfessional}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 hover:bg-blue-50 text-zinc-700 hover:text-blue-700 font-medium transition-colors border border-zinc-200"
-        >
-          <span>💼</span> GitHub (Professional)
-        </a>
       </div>
     </header>
   );

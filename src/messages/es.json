@@ -10,8 +10,7 @@
     "email": "Correo",
     "phone": "Teléfono",
     "linkedin": "LinkedIn",
-    "githubPersonal": "GitHub (Personal)",
-    "githubProfessional": "GitHub (Profesional)"
+    "githubPersonal": "GitHub"
   },
   "sections": {
     "summary": "Resumen Profesional",
