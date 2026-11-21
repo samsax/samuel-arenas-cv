@@ -64,6 +64,8 @@ samuel-arenas-cv/
 │   └── messages/
 │       ├── en.json            # English translations
 │       └── es.json            # Spanish translations
+├── .github/workflows/ci.yml   # Lint, typecheck, test and build on PRs and master
+├── vitest.config.mts          # Vitest config (Node by default, jsdom per file)
 ├── scripts/
 │   └── generate-pdfs.mjs      # `pnpm pdf`: prints both PDFs (Windows, macOS, Linux)
 ├── middleware.ts              # Locale detection and routing
@@ -112,6 +114,23 @@ pnpm start
 ## 📄 License
 
 MIT © [Samuel David Arenas Pareja](https://github.com/samsax)
+
+---
+
+## ✅ Tests and CI
+
+```bash
+pnpm test         # run all unit tests once (Vitest)
+pnpm test:watch   # re-run on change
+pnpm lint
+pnpm typecheck
+```
+
+- **What is covered:** the CV data, messages, JSON-LD, metadata, sitemap, `/llms.txt`, the locale layout (404 for unknown locales) and the CV components in both languages.
+- **Guards:** tests fail if the public copy names the client or its internal products, shows exact work hours or the professional GitHub account, has English and Spanish out of sync, uses a non-ISO date, or lists a current skill that no experience bullet mentions. When a failure is intended, for example a deliberate content change, update the test in the same commit.
+- **Conventions:** tests sit next to the code they cover as `*.test.ts(x)`. Data, lib and route tests run in Node; component tests start with `// @vitest-environment jsdom`.
+- **Not covered:** async Server Components cannot be rendered by Vitest, so `Header` is tested with `next-intl/server` mocked, and the root layout is not rendered. The PDFs are binary files and are not compared with the page, so run `pnpm pdf` after any copy change.
+- **CI:** `.github/workflows/ci.yml` runs lint, typecheck, test and build on every pull request and on pushes to `master`, using Node 24 and the pnpm version from `package.json`.
 
 ---
 
