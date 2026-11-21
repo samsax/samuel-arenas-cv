@@ -42,6 +42,7 @@ samuel-arenas-cv/
 │   │   │   ├── layout.tsx     # Locale layout with Schema.org JSON-LD & OG tags
 │   │   │   └── page.tsx       # Main CV page (Server Component)
 │   │   ├── llms.txt/route.ts  # /llms.txt generated from cv-data.ts
+│   │   ├── sitemap.ts         # /sitemap.xml (en and es, with hreflang alternates)
 │   │   ├── globals.css        # Tailwind CSS and print stylesheet
 │   │   ├── layout.tsx         # Root pass-through layout
 │   │   └── page.tsx           # Default redirect to /en
