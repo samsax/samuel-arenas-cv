@@ -6,14 +6,14 @@ import { BASE_URL, generateMetadata } from './metadata';
 describe('generateMetadata', () => {
   it('builds the English title, description and Open Graph locale', () => {
     const meta = generateMetadata('en');
-    expect(meta.title).toBe('Samuel David Arenas Pareja | Senior Software Engineer');
+    expect(meta.title).toBe('Samuel David Arenas Pareja | Senior Full-Stack Engineer');
     expect(meta.description).toBe(cvData.summary.en);
     expect(meta.openGraph).toMatchObject({ locale: 'en_US', url: `${BASE_URL}/en` });
   });
 
   it('builds the Spanish title, description and Open Graph locale', () => {
     const meta = generateMetadata('es');
-    expect(meta.title).toBe('Samuel David Arenas Pareja | Ingeniero de Software Senior');
+    expect(meta.title).toBe('Samuel David Arenas Pareja | Ingeniero Full-Stack Senior');
     expect(meta.description).toBe(cvData.summary.es);
     expect(meta.openGraph).toMatchObject({ locale: 'es_CO', url: `${BASE_URL}/es` });
   });

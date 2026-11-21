@@ -22,7 +22,7 @@ describe('GET /llms.txt', () => {
       '## Languages',
       '## Interests',
     ]);
-    expect(text.startsWith('# Samuel David Arenas Pareja — Senior Software Engineer')).toBe(true);
+    expect(text.startsWith('# Samuel David Arenas Pareja — Senior Full-Stack Engineer')).toBe(true);
   });
 
   it('is built from the CV data', async () => {

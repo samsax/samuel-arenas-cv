@@ -14,7 +14,7 @@ export function generateMetadata(locale: string): Metadata {
     description,
     keywords: [
       'Samuel David Arenas Pareja',
-      'Senior Software Engineer',
+      'Senior Full-Stack Engineer',
       'Full Stack Developer',
       'React',
       'Next.js',

@@ -19,8 +19,8 @@ describe('locale layout', () => {
   });
 
   it.each([
-    ['en', 'Samuel David Arenas Pareja | Senior Software Engineer'],
-    ['es', 'Samuel David Arenas Pareja | Ingeniero de Software Senior'],
+    ['en', 'Samuel David Arenas Pareja | Senior Full-Stack Engineer'],
+    ['es', 'Samuel David Arenas Pareja | Ingeniero Full-Stack Senior'],
   ])('builds the page metadata for "%s"', async (locale, title) => {
     const meta = await generateMetadata({ params: Promise.resolve({ locale }) });
     expect(meta.title).toBe(title);
