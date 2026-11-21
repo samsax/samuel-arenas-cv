@@ -17,7 +17,6 @@ export function generateMetadata(locale: string): Metadata {
       'Senior Software Engineer',
       'Full Stack Developer',
       'React',
-      'Next.js',
       'Ruby on Rails',
       'Apache Kafka',
       'Procore',

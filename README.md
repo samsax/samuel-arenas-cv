@@ -10,10 +10,10 @@
 - **🤖 AI Recruitment Optimization:**
   - Semantic HTML5 document structure with accessibility landmarks.
   - Rich **Schema.org JSON-LD** graph (`Person` + `ProfilePage`) for knowledge graph ingestion.
-  - Dedicated `/llms.txt` file for rapid ingestion by LLM-powered hiring tools.
+  - Dedicated `/llms.txt` route, generated from `cv-data.ts`, for rapid ingestion by LLM-powered hiring tools.
   - Clean Server-Side Rendering (SSR) ensuring text visibility to scrapers without client-side hydration delays.
 - **🖨️ Print & PDF Ready:** Integrated clean printable stylesheet that removes web elements and formats cleanly to an ATS-ready document.
-- **🛠️ Calibrated Skills Matrix:** Accurately categorized by production evidence, tenure, and verified Procore Hubs platform work.
+- **🛠️ Evidence-based Skills:** Two groups, current and earlier, with no year badges; every current skill appears in an experience bullet.
 
 ---
 
@@ -33,13 +33,15 @@
 ```
 samuel-arenas-cv/
 ├── public/
-│   ├── llms.txt               # LLM ingestion summary
+│   ├── Samuel_Arenas_CV_EN.pdf  # Printed from /en (regenerate after any copy change)
+│   ├── Samuel_Arenas_CV_ES.pdf  # Printed from /es (regenerate after any copy change)
 │   └── robots.txt             # Search crawler instructions
 ├── src/
 │   ├── app/
 │   │   ├── [locale]/
 │   │   │   ├── layout.tsx     # Locale layout with Schema.org JSON-LD & OG tags
 │   │   │   └── page.tsx       # Main CV page (Server Component)
+│   │   ├── llms.txt/route.ts  # /llms.txt generated from cv-data.ts
 │   │   ├── globals.css        # Tailwind CSS and print stylesheet
 │   │   ├── layout.tsx         # Root pass-through layout
 │   │   └── page.tsx           # Default redirect to /en
@@ -55,6 +57,7 @@ samuel-arenas-cv/
 │   │   ├── navigation.ts      # Localized navigation primitives
 │   │   └── request.ts         # Server-side request locale loader
 │   ├── lib/
+│   │   ├── format-date.ts     # ISO year-month to localized "Apr 2024" / "abr de 2024"
 │   │   ├── metadata.ts        # Open Graph & SEO metadata generator
 │   │   └── schema.ts          # Schema.org structured data generator
 │   └── messages/
@@ -106,3 +109,20 @@ pnpm start
 ## 📄 License
 
 MIT © [Samuel David Arenas Pareja](https://github.com/samsax)
+
+---
+
+## 📄 Regenerating the PDFs
+
+The download button serves the two PDFs in `public/`. They are printed from the built site, so reprint both after any change to `src/data/cv-data.ts`:
+
+```bash
+pnpm build && pnpm start -p 3457 &
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+"$CHROME" --headless=new --no-pdf-header-footer --virtual-time-budget=5000 \
+  --print-to-pdf=public/Samuel_Arenas_CV_EN.pdf http://localhost:3457/en
+"$CHROME" --headless=new --no-pdf-header-footer --virtual-time-budget=5000 \
+  --print-to-pdf=public/Samuel_Arenas_CV_ES.pdf http://localhost:3457/es
+```
+
+Both files should be two pages. Hobbies, the navbar, the footer and the buttons are hidden in print.

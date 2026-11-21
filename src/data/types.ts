@@ -9,7 +9,6 @@ export interface CVData {
     now: string[];
     earlier: string[];
   };
-  certifications: Certification[];
   education: Education;
   languages: Language[];
   hobbies: {
@@ -24,12 +23,10 @@ export interface PersonalInfo {
     en: string;
     es: string;
   };
-  location: string;
   email: string;
   phone: string;
   linkedin: string;
   githubPersonal: string;
-  githubProfessional: string;
 }
 
 export interface ExperienceItem {
@@ -53,14 +50,10 @@ export interface Role {
     en: string;
     es: string;
   };
+  /** ISO year-month, e.g. `2024-04`. */
   startDate: string;
-  endDate: string;
-}
-
-export interface Certification {
-  name: string;
-  issuer?: string;
-  issuedAt?: string;
+  /** ISO year-month, or `null` for the current role. */
+  endDate: string | null;
 }
 
 export interface Education {
@@ -69,7 +62,14 @@ export interface Education {
     es: string;
   };
   institution: string;
-  period: string;
+  /** ISO year-month. */
+  startDate: string;
+  /** ISO year-month. */
+  endDate: string;
+  note: {
+    en: string;
+    es: string;
+  };
 }
 
 export interface Language {

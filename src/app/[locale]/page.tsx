@@ -4,7 +4,6 @@ import { Header } from '@/components/cv/Header';
 import { Summary } from '@/components/cv/Summary';
 import { Experience } from '@/components/cv/Experience';
 import { Skills } from '@/components/cv/Skills';
-import { Certifications } from '@/components/cv/Certifications';
 import { Education } from '@/components/cv/Education';
 import { Languages } from '@/components/cv/Languages';
 import { Hobbies } from '@/components/cv/Hobbies';
@@ -25,7 +24,6 @@ export default async function CVPage({
         <Summary locale={locale} />
         <Experience locale={locale} />
         <Skills locale={locale} />
-        <Certifications locale={locale} />
         <Education locale={locale} />
         <Languages locale={locale} />
         <Hobbies locale={locale} />

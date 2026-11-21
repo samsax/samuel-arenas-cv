@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { cvData } from '@/data/cv-data';
+import { formatMonthYear } from '@/lib/format-date';
 
 interface ExperienceProps {
   locale: string;
@@ -20,7 +21,9 @@ export function Experience({ locale }: ExperienceProps) {
           return (
             <article
               key={index}
-              className="relative pl-0 sm:pl-4 border-l-0 sm:border-l-2 border-zinc-200 print:border-l-0"
+              className={`relative pl-0 sm:pl-4 border-l-0 sm:border-l-2 border-zinc-200 print:border-l-0 ${
+                index > 0 ? 'print:break-inside-avoid' : ''
+              }`}
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
                 <div>
@@ -50,7 +53,8 @@ export function Experience({ locale }: ExperienceProps) {
                       {isEs ? role.title.es : role.title.en}
                     </span>
                     <span className="text-xs text-zinc-500 font-mono">
-                      {role.startDate} – {role.endDate === 'Present' && isEs ? 'Presente' : role.endDate}
+                      {formatMonthYear(role.startDate, locale)} –{' '}
+                      {role.endDate ? formatMonthYear(role.endDate, locale) : isEs ? 'Presente' : 'Present'}
                     </span>
                   </div>
                 ))}

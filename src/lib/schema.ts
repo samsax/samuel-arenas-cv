@@ -4,7 +4,7 @@ const BASE_URL = 'https://samuel-arenas-cv.vercel.app';
 
 export function generateJsonLd(locale: string) {
   const isEs = locale === 'es';
-  const { personal, summary, experience, skills, certifications, education } = cvData;
+  const { personal, summary, experience, skills, education } = cvData;
 
   const currentJob = experience[0];
   const allSkills = [
@@ -42,7 +42,6 @@ export function generateJsonLd(locale: string) {
         sameAs: [
           personal.linkedin,
           personal.githubPersonal,
-          personal.githubProfessional,
         ],
         knowsAbout: allSkills,
         alumniOf: {
@@ -53,12 +52,6 @@ export function generateJsonLd(locale: string) {
           '@type': 'Organization',
           name: currentJob.company,
         },
-        hasCredential: certifications.map((cert) => ({
-          '@type': 'EducationalOccupationalCredential',
-          name: cert.name,
-          ...(cert.issuer ? { recognizedBy: { '@type': 'Organization', name: cert.issuer } } : {}),
-          ...(cert.issuedAt ? { dateCreated: cert.issuedAt } : {}),
-        })),
       },
     ],
   };

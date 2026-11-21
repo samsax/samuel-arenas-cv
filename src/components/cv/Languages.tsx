@@ -11,7 +11,7 @@ export function Languages({ locale }: LanguagesProps) {
   const sectionTitle = isEs ? 'Idiomas' : 'Languages';
 
   return (
-    <Section id="languages" title={sectionTitle}>
+    <Section id="languages" title={sectionTitle} className="print:break-inside-avoid">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {cvData.languages.map((lang, index) => (
           <div

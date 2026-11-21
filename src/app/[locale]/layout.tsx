@@ -44,7 +44,7 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col bg-zinc-100 text-zinc-900 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar locale={locale} />
-          <main className="flex-1 py-8 sm:py-12">{children}</main>
+          <main className="flex-1 py-8 sm:py-12 print:py-0">{children}</main>
           <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>

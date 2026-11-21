@@ -14,7 +14,7 @@ export function Hobbies({ locale }: HobbiesProps) {
   const icons = ['🎷', '☕', '🥩'];
 
   return (
-    <Section id="hobbies" title={sectionTitle}>
+    <Section id="hobbies" title={sectionTitle} className="print:hidden">
       <div className="flex flex-wrap gap-3">
         {hobbiesList.map((hobby, index) => (
           <div

@@ -10,14 +10,12 @@
     "email": "Correo",
     "phone": "Teléfono",
     "linkedin": "LinkedIn",
-    "githubPersonal": "GitHub (Personal)",
-    "githubProfessional": "GitHub (Profesional)"
+    "githubPersonal": "GitHub (Personal)"
   },
   "sections": {
     "summary": "Resumen Profesional",
     "experience": "Experiencia Profesional",
     "skills": "Habilidades",
-    "certifications": "Cursos y certificados",
     "education": "Educación",
     "languages": "Idiomas",
     "hobbies": "Intereses y Pasatiempos"
