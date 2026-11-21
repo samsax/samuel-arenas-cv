@@ -62,7 +62,7 @@ describe('generateJsonLd', () => {
   it('names FullStack Labs as the employer', () => {
     expect(nodeOfType('en', 'Person').worksFor).toEqual({
       '@type': 'Organization',
-      name: cvData.experience[0].company,
+      name: cvData.experience[0].company.en,
     });
   });
 

@@ -31,8 +31,8 @@ export interface PersonalInfo {
 }
 
 export interface ExperienceItem {
-  company: string;
-  location: string;
+  company: { en: string; es: string };
+  location: { en: string; es: string };
   roles: Role[];
   overview?: {
     en: string;

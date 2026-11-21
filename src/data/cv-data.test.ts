@@ -14,7 +14,8 @@ describe('cvData public copy', () => {
   it('discloses the FullStack Labs contract in both languages', () => {
     expect(cvData.summary.en).toContain('FullStack Labs');
     expect(cvData.summary.es).toContain('FullStack Labs');
-    expect(cvData.experience[0].company).toContain('FullStack Labs');
+    expect(cvData.experience[0].company.en).toContain('FullStack Labs');
+    expect(cvData.experience[0].company.es).toContain('FullStack Labs');
   });
 
   it('keeps both the senior and the mid-level title on the current employer', () => {
