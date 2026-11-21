@@ -16,7 +16,7 @@ export function Footer({ locale }: FooterProps) {
           © {year} {cvData.personal.fullName}.{' '}
           {isEs ? 'Todos los derechos reservados.' : 'All rights reserved.'}
         </p>
-        <p className="text-zinc-400">
+        <p className="text-zinc-500">
           {isEs
             ? 'Construido con Next.js 16 (App Router, SSR), Tailwind CSS y estructurado para descubrimiento de agentes de IA y ATS.'
             : 'Built with Next.js 16 (App Router, SSR), Tailwind CSS & structured for AI recruitment agents and ATS discovery.'}
