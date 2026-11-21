@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { cvData } from '@/data/cv-data';
 
-const BASE_URL = 'https://samuel-arenas-cv.vercel.app';
+export const BASE_URL = 'https://samuel-arenas-cv.vercel.app';
 
 export function generateMetadata(locale: string): Metadata {
   const isEs = locale === 'es';
