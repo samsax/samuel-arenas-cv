@@ -44,8 +44,8 @@ export const cvData: CVData = {
         },
       ],
       overview: {
-        en: 'I worked on the platform’s onboarding services until mid-2025, including implementing entitlements in a feature service that controls which paid modules each customer can use. I joined the home team in June 2025 and build company and project home for construction teams across the home UI, its microservice, and the platform’s Rails monolith.',
-        es: 'Trabajé en los servicios de onboarding de la plataforma hasta mediados de 2025, incluyendo la implementación de las habilitaciones de módulos (entitlements) en un servicio de funcionalidades que controla qué módulos de pago puede usar cada cliente. Me incorporé al equipo de páginas de inicio en junio de 2025 y desarrollo páginas de inicio de empresa y proyecto para equipos de construcción en la interfaz de inicio, su microservicio y el monolito de Rails de la plataforma.',
+        en: 'I worked on the platform’s onboarding services until mid-2025, including implementing entitlements in a feature service that controls which paid modules each customer can use. I joined the home team in June 2025 and build company and project home for construction teams across the home UI, its microservice, and the platform’s Rails monolith. I use Cursor, Claude Code, and GitHub Copilot day to day.',
+        es: 'Trabajé en los servicios de onboarding de la plataforma hasta mediados de 2025, incluyendo la implementación de las habilitaciones de módulos (entitlements) en un servicio de funcionalidades que controla qué módulos de pago puede usar cada cliente. Me incorporé al equipo de páginas de inicio en junio de 2025 y desarrollo páginas de inicio de empresa y proyecto para equipos de construcción en la interfaz de inicio, su microservicio y el monolito de Rails de la plataforma. Uso Cursor, Claude Code y GitHub Copilot a diario.',
       },
       achievements: {
         en: [
@@ -122,6 +122,9 @@ export const cvData: CVData = {
       'DynamoDB',
       'AWS',
       'LaunchDarkly',
+      'Cursor',
+      'Claude Code',
+      'GitHub Copilot',
     ],
     earlier: ['Next.js', 'Kotlin', 'Java/Android', 'Vue.js', 'PostgreSQL', 'PHP'],
   },

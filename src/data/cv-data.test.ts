@@ -114,7 +114,11 @@ describe('cvData dates', () => {
 describe('cvData skills', () => {
   const allSkills = [...cvData.skills.now, ...cvData.skills.earlier];
   const experienceText = cvData.experience
-    .flatMap((item) => [...item.achievements.en, ...item.achievements.es])
+    .flatMap((item) => [
+      ...item.achievements.en,
+      ...item.achievements.es,
+      ...(item.overview ? [item.overview.en, item.overview.es] : []),
+    ])
     .join(' ')
     .toLowerCase();
 
