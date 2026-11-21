@@ -6,7 +6,7 @@
     "printCV": "Imprimir CV"
   },
   "header": {
-    "location": "La Ceja, Colombia · 8:00 a. m.–5:00 p. m. COT (UTC−5) · Flexibilidad para coincidir con el horario del Este de EE. UU.",
+    "location": "La Ceja, Colombia · Flexibilidad para coincidir con el horario del Este de EE. UU.",
     "email": "Correo",
     "phone": "Teléfono",
     "linkedin": "LinkedIn",
@@ -16,9 +16,9 @@
     "summary": "Resumen Profesional",
     "experience": "Experiencia Profesional",
     "skills": "Habilidades",
+    "certifications": "Cursos y certificados",
     "education": "Educación",
-    "languages": "Idiomas",
-    "hobbies": "Intereses y Pasatiempos"
+    "languages": "Idiomas"
   },
   "skills": {
     "nowTitle": "Actuales",

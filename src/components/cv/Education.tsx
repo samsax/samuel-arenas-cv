@@ -14,7 +14,7 @@ export function Education({ locale }: EducationProps) {
 
   return (
     <Section id="education" title={sectionTitle} className="print:break-inside-avoid">
-      <div className="p-4 rounded-lg border border-zinc-200 bg-zinc-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div className="p-4 rounded-lg border border-zinc-200 bg-zinc-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2 print:p-0 print:border-0 print:bg-transparent">
         <div className="flex items-start gap-3">
           <span className="text-2xl">🎓</span>
           <div>

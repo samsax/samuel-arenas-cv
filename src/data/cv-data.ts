@@ -14,15 +14,13 @@ export const cvData: CVData = {
   },
 
   summary: {
-    en: 'Senior software engineer with 10 years of experience, contracted through FullStack Labs to Procore. Promoted from mid-level to senior in April 2024. I work on company and project home for construction teams, first on Procore’s Onboarding services and on Hubs since June 2025.',
-    es: 'Ingeniero de software sénior con 10 años de experiencia, contratado a través de FullStack Labs para trabajar con Procore. Ascendí de nivel intermedio a sénior en abril de 2024. Trabajo en las páginas de inicio de empresa y proyecto para equipos de construcción: primero en los servicios de Onboarding de Procore y, desde junio de 2025, en Hubs.',
+    en: 'Senior software engineer with 10 years of experience, contracted through FullStack Labs to a construction-technology platform. Promoted from mid-level to senior in April 2024. I work on company and project home for construction teams, first on the platform’s onboarding services and, since June 2025, on its home pages.',
+    es: 'Ingeniero de software sénior con 10 años de experiencia, contratado a través de FullStack Labs para una plataforma de tecnología para la construcción. Ascendí de nivel intermedio a sénior en abril de 2024. Trabajo en las páginas de inicio de empresa y proyecto para equipos de construcción: primero en los servicios de onboarding de la plataforma y, desde junio de 2025, en sus páginas de inicio.',
   },
 
   experience: [
     {
       company: 'FullStack Labs (Remote, USA Contractor)',
-      client: 'Procore Technologies',
-      team: 'Hubs Team',
       location: 'Remote (USA / Colombia)',
       roles: [
         {
@@ -43,21 +41,21 @@ export const cvData: CVData = {
         },
       ],
       overview: {
-        en: 'I worked on Procore’s Onboarding services until mid-2025, including implementing entitlements in Feature Service, the service that controls which paid modules each customer can use across Procore. I joined Hubs in June 2025 and build company and project home for construction teams across the Hubs UI, its microservice, and Cornerstone, Procore’s Rails monolith.',
-        es: 'Trabajé en los servicios de Onboarding de Procore hasta mediados de 2025, incluyendo la implementación de las habilitaciones de módulos (entitlements) en Feature Service, el servicio que controla qué módulos de pago puede usar cada cliente en toda Procore. Me incorporé al equipo Hubs en junio de 2025 y desarrollo páginas de inicio de empresa y proyecto para equipos de construcción en la interfaz de Hubs, su microservicio y Cornerstone, el monolito de Rails de Procore.',
+        en: 'I worked on the platform’s onboarding services until mid-2025, including implementing entitlements in a feature service that controls which paid modules each customer can use. I joined the home team in June 2025 and build company and project home for construction teams across the home UI, its microservice, and the platform’s Rails monolith.',
+        es: 'Trabajé en los servicios de onboarding de la plataforma hasta mediados de 2025, incluyendo la implementación de las habilitaciones de módulos (entitlements) en un servicio de funcionalidades que controla qué módulos de pago puede usar cada cliente. Me incorporé al equipo de páginas de inicio en junio de 2025 y desarrollo páginas de inicio de empresa y proyecto para equipos de construcción en la interfaz de inicio, su microservicio y el monolito de Rails de la plataforma.',
       },
       achievements: {
         en: [
-          'Shipped an in-app toggle between legacy Portfolio and Procore Hubs across Cornerstone, Procore’s Ruby on Rails monolith, and the Hubs UI. Implemented the admin API and authorization, shared eligibility and redirects, configuration defaults, and a confirmation step before bulk Project Hub updates; demoed the working flow to product and engineering.',
-          'Built Project Overview and Procore Home UI in React 18 and TypeScript: routed existing and new projects to hub views by default and delivered the Project Information card, Open Items modal, and full team panel. Configured LaunchDarkly beta segments for Card Library in production and sandbox.',
-          'Moved Company Hub views to the Hubs service API, using Node.js/NestJS and AWS DynamoDB Streams. Seeded default Company, Project, and Dev Hub containers and emitted outbox events through Kafka Connect to Databricks; removed legacy cutover flags after rollout.',
-          'Improved keyboard access and screen-reader behavior across Portfolio, Safety, and Project Home, fixing tab navigation and roles, keyboard use of Notes actions, and weather announcements.',
+          'Shipped an in-app toggle between the legacy portfolio page and the new home experience across the platform’s Ruby on Rails monolith and the home UI. Implemented the admin API and authorization, shared eligibility and redirects, configuration defaults, and a confirmation step before bulk project updates; demoed the working flow to product and engineering.',
+          'Built the project overview and company home UI in React 18, Next.js, and TypeScript: routed existing and new projects to the new views by default and delivered the project information card, open items modal, and full team panel. Configured LaunchDarkly beta segments for the card library in production and sandbox.',
+          'Moved company home views to the home service API, using Node.js/NestJS and AWS DynamoDB Streams. Seeded default company, project, and dev home containers and emitted outbox events through Kafka Connect to Databricks; removed legacy cutover flags after rollout.',
+          'Improved keyboard access and screen-reader behavior across portfolio, safety, and project home screens, fixing tab navigation and roles, keyboard use of notes actions, and weather announcements.',
         ],
         es: [
-          'Puse en producción un control dentro de la aplicación para alternar entre el Portfolio heredado y Procore Hubs en Cornerstone, el monolito de Procore basado en Ruby on Rails, y la interfaz de Hubs. Implementé la API administrativa y la autorización, la elegibilidad y los redireccionamientos compartidos, los valores predeterminados de configuración y una confirmación antes de actualizar en lote los Project Hubs; presenté el flujo a producto e ingeniería.',
-          'Desarrollé la interfaz de Project Overview y Procore Home con React 18 y TypeScript: configuré el enrutamiento predeterminado de proyectos existentes y nuevos a vistas de Hubs e implementé la tarjeta Project Information, el modal Open Items y el panel completo del equipo. Configuré segmentos beta de LaunchDarkly para Card Library en producción y sandbox.',
-          'Conecté las vistas de Company Hub a la API del servicio Hubs con Node.js/NestJS y DynamoDB Streams de AWS. Inicialicé los contenedores predeterminados de Company, Project y Dev Hub y envié eventos outbox a Databricks mediante Kafka Connect; retiré las feature flags de transición después del lanzamiento.',
-          'Mejoré la navegación por teclado y la experiencia con lectores de pantalla en Portfolio, Safety y Project Home: corregí la navegación y los roles de pestañas, habilité el uso por teclado de las acciones de Notes y mejoré los anuncios del clima.',
+          'Puse en producción un control dentro de la aplicación para alternar entre la página de portafolio heredada y la nueva experiencia de inicio en el monolito de Ruby on Rails de la plataforma y la interfaz de inicio. Implementé la API administrativa y la autorización, la elegibilidad y los redireccionamientos compartidos, los valores predeterminados de configuración y una confirmación antes de actualizar proyectos en lote; presenté el flujo a producto e ingeniería.',
+          'Desarrollé la interfaz de resumen de proyecto y de inicio de empresa con React 18, Next.js y TypeScript: configuré el enrutamiento predeterminado de proyectos existentes y nuevos a las nuevas vistas e implementé la tarjeta de información del proyecto, el modal de elementos abiertos y el panel completo del equipo. Configuré segmentos beta de LaunchDarkly para la biblioteca de tarjetas en producción y sandbox.',
+          'Conecté las vistas de inicio de empresa a la API del servicio de inicio con Node.js/NestJS y DynamoDB Streams de AWS. Inicialicé los contenedores de inicio predeterminados de empresa, proyecto y desarrollo y envié eventos outbox a Databricks mediante Kafka Connect; retiré las feature flags de transición después del lanzamiento.',
+          'Mejoré la navegación por teclado y la experiencia con lectores de pantalla en las pantallas de portafolio, seguridad e inicio de proyecto: corregí la navegación y los roles de pestañas, habilité el uso por teclado de las acciones de notas y mejoré los anuncios del clima.',
         ],
       },
     },
@@ -111,6 +109,7 @@ export const cvData: CVData = {
     now: [
       'React',
       'TypeScript',
+      'Next.js',
       'Ruby on Rails',
       'Node.js',
       'Kafka',
@@ -120,6 +119,26 @@ export const cvData: CVData = {
     ],
     earlier: ['Kotlin', 'Java/Android', 'Vue.js', 'PostgreSQL', 'PHP'],
   },
+
+  certifications: [
+    { name: 'Curso de Bitcoin y Blockchain 2017', issuer: 'Platzi', issuedAt: '2020-08' },
+    { name: 'Curso Profesional de Scrum', issuer: 'Platzi', issuedAt: '2020-09' },
+    {
+      name: 'Curso de Introducción a los Negocios Online en Ecommerce',
+      issuer: 'Platzi',
+      issuedAt: '2020-09',
+    },
+    { name: 'Curso de Gestión de Equipos Ágiles', issuer: 'Platzi', issuedAt: '2020-10' },
+    { name: 'Curso de Design Sprint Aplicado', issuer: 'Platzi', issuedAt: '2020-10' },
+    { name: 'Curso de Liderazgo para Equipos de Trabajo', issuer: 'Platzi', issuedAt: '2021-01' },
+    { name: 'Curso de Técnicas de Negociación', issuer: 'Platzi', issuedAt: '2021-03' },
+    { name: 'Claude Code in Action', issuer: 'Anthropic', issuedAt: '2026-05' },
+    {
+      name: 'Certificate of completion: Introduction to agent skills',
+      issuer: 'Anthropic',
+      issuedAt: '2026-04',
+    },
+  ],
 
   education: {
     degree: {

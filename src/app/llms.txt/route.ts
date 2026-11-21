@@ -8,7 +8,7 @@ const LOCATION = 'La Ceja, Antioquia, Colombia (UTC−5, flexible for US Eastern
 
 // Built from the same data as the page so the file cannot drift from the CV.
 export function GET() {
-  const { personal, summary, experience, skills, education, languages } = cvData;
+  const { personal, summary, experience, skills, certifications, education, languages, hobbies } = cvData;
 
   const roleLines = (roles: (typeof experience)[number]['roles']) =>
     roles.map((role) => {
@@ -19,7 +19,6 @@ export function GET() {
   const experienceBlocks = experience.map((item) =>
     [
       `### ${item.company}`,
-      ...(item.client ? [`Client: ${item.client}${item.team ? ` (${item.team})` : ''}`] : []),
       `Location: ${item.location}`,
       ...roleLines(item.roles),
       ...(item.overview ? ['', item.overview.en] : []),
@@ -48,12 +47,21 @@ export function GET() {
     `- Now: ${skills.now.join(', ')}`,
     `- Earlier: ${skills.earlier.join(', ')}`,
     '',
+    '## Courses & Certificates',
+    ...certifications.map(
+      (cert) =>
+        `- ${cert.name}${cert.issuer ? `, ${cert.issuer}` : ''}${cert.issuedAt ? ` (${formatMonthYear(cert.issuedAt, 'en')})` : ''}`,
+    ),
+    '',
     '## Education',
     `- ${education.degree.en}, ${education.institution} (${formatMonthYear(education.startDate, 'en')} – ${formatMonthYear(education.endDate, 'en')})`,
     `- ${education.note.en}`,
     '',
     '## Languages',
     ...languages.map((language) => `- ${language.name.en}: ${language.level.en}`),
+    '',
+    '## Interests',
+    hobbies.en.join('; '),
     '',
   ].join('\n');
 

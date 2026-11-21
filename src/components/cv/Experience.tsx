@@ -30,12 +30,6 @@ export function Experience({ locale }: ExperienceProps) {
                   <h3 className="text-lg font-bold text-zinc-900">
                     {exp.company}
                   </h3>
-                  {exp.client && (
-                    <p className="text-sm font-semibold text-blue-700">
-                      {isEs ? 'Cliente' : 'Client'}: {exp.client}{' '}
-                      {exp.team ? `(${exp.team})` : ''}
-                    </p>
-                  )}
                 </div>
                 <span className="text-xs sm:text-sm text-zinc-500 font-medium">
                   {exp.location}

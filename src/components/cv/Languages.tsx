@@ -9,14 +9,16 @@ interface LanguagesProps {
 export function Languages({ locale }: LanguagesProps) {
   const isEs = locale === 'es';
   const sectionTitle = isEs ? 'Idiomas' : 'Languages';
+  const interestsLabel = isEs ? 'Intereses' : 'Interests';
+  const interests = (isEs ? cvData.hobbies.es : cvData.hobbies.en).join(' · ');
 
   return (
     <Section id="languages" title={sectionTitle} className="print:break-inside-avoid">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 print:grid-cols-2 print:gap-2">
         {cvData.languages.map((lang, index) => (
           <div
             key={index}
-            className="flex items-center justify-between p-3 rounded-lg border border-zinc-200 bg-white"
+            className="flex items-center justify-between p-3 rounded-lg border border-zinc-200 bg-white print:p-0 print:border-0"
           >
             <div className="flex items-center gap-2">
               <span>🌐</span>
@@ -30,6 +32,9 @@ export function Languages({ locale }: LanguagesProps) {
           </div>
         ))}
       </div>
+      <p className="mt-4 print:mt-2 text-sm text-zinc-600">
+        <span className="font-semibold text-zinc-800">{interestsLabel}:</span> {interests}
+      </p>
     </Section>
   );
 }

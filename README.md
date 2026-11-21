@@ -63,6 +63,8 @@ samuel-arenas-cv/
 │   └── messages/
 │       ├── en.json            # English translations
 │       └── es.json            # Spanish translations
+├── scripts/
+│   └── generate-pdfs.mjs      # `pnpm pdf`: prints both PDFs (Windows, macOS, Linux)
 ├── middleware.ts              # Locale detection and routing
 ├── next.config.ts             # Next.js & next-intl configuration
 └── tsconfig.json              # TypeScript configuration
@@ -117,12 +119,11 @@ MIT © [Samuel David Arenas Pareja](https://github.com/samsax)
 The download button serves the two PDFs in `public/`. They are printed from the built site, so reprint both after any change to `src/data/cv-data.ts`:
 
 ```bash
-pnpm build && pnpm start -p 3457 &
-CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-"$CHROME" --headless=new --no-pdf-header-footer --virtual-time-budget=5000 \
-  --print-to-pdf=public/Samuel_Arenas_CV_EN.pdf http://localhost:3457/en
-"$CHROME" --headless=new --no-pdf-header-footer --virtual-time-budget=5000 \
-  --print-to-pdf=public/Samuel_Arenas_CV_ES.pdf http://localhost:3457/es
+pnpm pdf
 ```
 
-Both files should be two pages. Hobbies, the navbar, the footer and the buttons are hidden in print.
+The script builds the site, serves it on port 3457, prints `/en` and `/es` with headless Chrome or Edge, and stops the server. It runs the same way on Windows (PowerShell), macOS and Linux and uses only Node built-ins.
+
+- **Browser:** it looks for Chrome, then Edge, in the standard install locations. Set `CHROME_PATH` to the executable to use a different one, for example in PowerShell: `$env:CHROME_PATH = "C:\Program Files\Google\Chrome\Application\chrome.exe"; pnpm pdf`.
+- **Port:** set `PORT` if 3457 is taken.
+- **Check:** open both PDFs and confirm they are two pages. The navbar, footer and buttons are hidden in print.
