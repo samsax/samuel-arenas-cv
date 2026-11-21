@@ -46,16 +46,16 @@ export const cvData: CVData = {
       },
       achievements: {
         en: [
-          'Shipped an in-app toggle between the legacy portfolio page and the new home experience across the platform’s Ruby on Rails monolith and the home UI. Implemented the admin API and authorization, shared eligibility and redirects, configuration defaults, and a confirmation step before bulk project updates; demoed the working flow to product and engineering.',
-          'Built the project overview and company home UI in React 18, Next.js, and TypeScript: routed existing and new projects to the new views by default and delivered the project information card, open items modal, and full team panel. Configured LaunchDarkly beta segments for the card library in production and sandbox.',
+          'Shipped an in-app toggle between the legacy portfolio page and the new home experience across the platform’s Ruby on Rails monolith and the home UI. Implemented the admin API and authorization, shared eligibility and redirects, configuration defaults, and a confirmation step before bulk project updates; demoed the working flow to product and engineering. Across about 6K paid companies, over 80% have both legacy pages turned off.',
+          'Built the project overview and company home UI in React 18 and TypeScript: routed existing and new projects to the new views by default and delivered the project information card, open items modal, and full team panel. Configured LaunchDarkly beta segments for the card library in production and sandbox.',
           'Moved company home views to the home service API, using Node.js/NestJS and AWS DynamoDB Streams. Seeded default company, project, and dev home containers and emitted outbox events through Kafka Connect to Databricks; removed legacy cutover flags after rollout.',
           'Improved keyboard access and screen-reader behavior across portfolio, safety, and project home screens, fixing tab navigation and roles, keyboard use of notes actions, and weather announcements. Verified the fixes with manual VoiceOver and NVDA testing.',
           'Built and configured a webpack Module Federation host that loads independently deployed card micro-frontends at runtime for company and project home.',
           'Wrote Jest and React Testing Library unit tests and Cypress end-to-end tests for the home UI.',
         ],
         es: [
-          'Puse en producción un control dentro de la aplicación para alternar entre la página de portafolio heredada y la nueva experiencia de inicio en el monolito de Ruby on Rails de la plataforma y la interfaz de inicio. Implementé la API administrativa y la autorización, la elegibilidad y los redireccionamientos compartidos, los valores predeterminados de configuración y una confirmación antes de actualizar proyectos en lote; presenté el flujo a producto e ingeniería.',
-          'Desarrollé la interfaz de resumen de proyecto y de inicio de empresa con React 18, Next.js y TypeScript: configuré el enrutamiento predeterminado de proyectos existentes y nuevos a las nuevas vistas e implementé la tarjeta de información del proyecto, el modal de elementos abiertos y el panel completo del equipo. Configuré segmentos beta de LaunchDarkly para la biblioteca de tarjetas en producción y sandbox.',
+          'Puse en producción un control dentro de la aplicación para alternar entre la página de portafolio heredada y la nueva experiencia de inicio en el monolito de Ruby on Rails de la plataforma y la interfaz de inicio. Implementé la API administrativa y la autorización, la elegibilidad y los redireccionamientos compartidos, los valores predeterminados de configuración y una confirmación antes de actualizar proyectos en lote; presenté el flujo a producto e ingeniería. En unas 6 mil empresas de pago, más del 80 % tiene ambas páginas heredadas desactivadas.',
+          'Desarrollé la interfaz de resumen de proyecto y de inicio de empresa con React 18 y TypeScript: configuré el enrutamiento predeterminado de proyectos existentes y nuevos a las nuevas vistas e implementé la tarjeta de información del proyecto, el modal de elementos abiertos y el panel completo del equipo. Configuré segmentos beta de LaunchDarkly para la biblioteca de tarjetas en producción y sandbox.',
           'Conecté las vistas de inicio de empresa a la API del servicio de inicio con Node.js/NestJS y DynamoDB Streams de AWS. Inicialicé los contenedores de inicio predeterminados de empresa, proyecto y desarrollo y envié eventos outbox a Databricks mediante Kafka Connect; retiré las feature flags de transición después del lanzamiento.',
           'Mejoré la navegación por teclado y la experiencia con lectores de pantalla en las pantallas de portafolio, seguridad e inicio de proyecto: corregí la navegación y los roles de pestañas, habilité el uso por teclado de las acciones de notas y mejoré los anuncios del clima. Verifiqué con pruebas manuales con VoiceOver y NVDA.',
           'Desarrollé y configuré un host de Module Federation de webpack que carga micro-frontends de tarjetas desplegados de forma independiente en tiempo de ejecución.',
@@ -113,7 +113,6 @@ export const cvData: CVData = {
     now: [
       'React',
       'TypeScript',
-      'Next.js',
       'Ruby on Rails',
       'Node.js',
       'Kafka',
@@ -121,7 +120,7 @@ export const cvData: CVData = {
       'AWS',
       'LaunchDarkly',
     ],
-    earlier: ['Kotlin', 'Java/Android', 'Vue.js', 'PostgreSQL', 'PHP'],
+    earlier: ['Next.js', 'Kotlin', 'Java/Android', 'Vue.js', 'PostgreSQL', 'PHP'],
   },
 
   certifications: [
