@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { cvData } from '@/data/cv-data';
+import { formatMonthYear } from '@/lib/format-date';
 
 interface EducationProps {
   locale: string;
@@ -12,8 +13,8 @@ export function Education({ locale }: EducationProps) {
   const { education } = cvData;
 
   return (
-    <Section id="education" title={sectionTitle}>
-      <div className="p-4 rounded-lg border border-zinc-200 bg-zinc-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+    <Section id="education" title={sectionTitle} className="print:break-inside-avoid">
+      <div className="p-4 rounded-lg border border-zinc-200 bg-zinc-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2 print:p-0 print:border-0 print:bg-transparent">
         <div className="flex items-start gap-3">
           <span className="text-2xl">🎓</span>
           <div>
@@ -23,10 +24,13 @@ export function Education({ locale }: EducationProps) {
             <p className="text-sm font-medium text-blue-700">
               {education.institution}
             </p>
+            <p className="mt-1 text-sm text-zinc-600">
+              {isEs ? education.note.es : education.note.en}
+            </p>
           </div>
         </div>
         <span className="text-xs sm:text-sm font-mono text-zinc-500 pl-9 sm:pl-0">
-          {education.period}
+          {formatMonthYear(education.startDate, locale)} – {formatMonthYear(education.endDate, locale)}
         </span>
       </div>
     </Section>

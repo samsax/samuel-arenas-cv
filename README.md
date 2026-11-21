@@ -10,10 +10,10 @@
 - **🤖 AI Recruitment Optimization:**
   - Semantic HTML5 document structure with accessibility landmarks.
   - Rich **Schema.org JSON-LD** graph (`Person` + `ProfilePage`) for knowledge graph ingestion.
-  - Dedicated `/llms.txt` file for rapid ingestion by LLM-powered hiring tools.
+  - Dedicated `/llms.txt` route, generated from `cv-data.ts`, for rapid ingestion by LLM-powered hiring tools.
   - Clean Server-Side Rendering (SSR) ensuring text visibility to scrapers without client-side hydration delays.
 - **🖨️ Print & PDF Ready:** Integrated clean printable stylesheet that removes web elements and formats cleanly to an ATS-ready document.
-- **🛠️ Calibrated Skills Matrix:** Accurately categorized by production evidence, tenure, and verified Procore Hubs platform work.
+- **🛠️ Evidence-based Skills:** Two groups, current and earlier, with no year badges; every current skill appears in an experience bullet.
 
 ---
 
@@ -33,13 +33,15 @@
 ```
 samuel-arenas-cv/
 ├── public/
-│   ├── llms.txt               # LLM ingestion summary
+│   ├── Samuel_Arenas_CV_EN.pdf  # Printed from /en (regenerate after any copy change)
+│   ├── Samuel_Arenas_CV_ES.pdf  # Printed from /es (regenerate after any copy change)
 │   └── robots.txt             # Search crawler instructions
 ├── src/
 │   ├── app/
 │   │   ├── [locale]/
 │   │   │   ├── layout.tsx     # Locale layout with Schema.org JSON-LD & OG tags
 │   │   │   └── page.tsx       # Main CV page (Server Component)
+│   │   ├── llms.txt/route.ts  # /llms.txt generated from cv-data.ts
 │   │   ├── globals.css        # Tailwind CSS and print stylesheet
 │   │   ├── layout.tsx         # Root pass-through layout
 │   │   └── page.tsx           # Default redirect to /en
@@ -55,11 +57,14 @@ samuel-arenas-cv/
 │   │   ├── navigation.ts      # Localized navigation primitives
 │   │   └── request.ts         # Server-side request locale loader
 │   ├── lib/
+│   │   ├── format-date.ts     # ISO year-month to localized "Apr 2024" / "abr de 2024"
 │   │   ├── metadata.ts        # Open Graph & SEO metadata generator
 │   │   └── schema.ts          # Schema.org structured data generator
 │   └── messages/
 │       ├── en.json            # English translations
 │       └── es.json            # Spanish translations
+├── scripts/
+│   └── generate-pdfs.mjs      # `pnpm pdf`: prints both PDFs (Windows, macOS, Linux)
 ├── middleware.ts              # Locale detection and routing
 ├── next.config.ts             # Next.js & next-intl configuration
 └── tsconfig.json              # TypeScript configuration
@@ -106,3 +111,19 @@ pnpm start
 ## 📄 License
 
 MIT © [Samuel David Arenas Pareja](https://github.com/samsax)
+
+---
+
+## 📄 Regenerating the PDFs
+
+The download button serves the two PDFs in `public/`. They are printed from the built site, so reprint both after any change to `src/data/cv-data.ts`:
+
+```bash
+pnpm pdf
+```
+
+The script builds the site, serves it on port 3457, prints `/en` and `/es` with headless Chrome or Edge, and stops the server. It runs the same way on Windows (PowerShell), macOS and Linux and uses only Node built-ins.
+
+- **Browser:** it looks for Chrome, then Edge, in the standard install locations. Set `CHROME_PATH` to the executable to use a different one, for example in PowerShell: `$env:CHROME_PATH = "C:\Program Files\Google\Chrome\Application\chrome.exe"; pnpm pdf`.
+- **Port:** set `PORT` if 3457 is taken.
+- **Check:** open both PDFs and confirm they are two pages. The navbar, footer and buttons are hidden in print.

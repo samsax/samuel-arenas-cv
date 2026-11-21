@@ -7,7 +7,6 @@ import { Skills } from '@/components/cv/Skills';
 import { Certifications } from '@/components/cv/Certifications';
 import { Education } from '@/components/cv/Education';
 import { Languages } from '@/components/cv/Languages';
-import { Hobbies } from '@/components/cv/Hobbies';
 import { DownloadButton } from '@/components/cv/DownloadButton';
 
 export default async function CVPage({
@@ -28,7 +27,6 @@ export default async function CVPage({
         <Certifications locale={locale} />
         <Education locale={locale} />
         <Languages locale={locale} />
-        <Hobbies locale={locale} />
         <div className="mt-12 text-center pt-6 border-t border-zinc-200 print:hidden">
           <DownloadButton locale={locale} />
         </div>

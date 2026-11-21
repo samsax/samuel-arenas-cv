@@ -42,7 +42,6 @@ export function generateJsonLd(locale: string) {
         sameAs: [
           personal.linkedin,
           personal.githubPersonal,
-          personal.githubProfessional,
         ],
         knowsAbout: allSkills,
         alumniOf: {

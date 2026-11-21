@@ -20,7 +20,6 @@ export function generateMetadata(locale: string): Metadata {
       'Next.js',
       'Ruby on Rails',
       'Apache Kafka',
-      'Procore',
       'Colombia',
       'Remote Engineer',
       'WCAG 2.1 Accessibility',

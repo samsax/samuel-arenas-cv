@@ -12,7 +12,7 @@ export function Skills({ locale }: SkillsProps) {
   const sectionTitle = isEs ? 'Habilidades' : 'Skills';
 
   return (
-    <Section id="skills" title={sectionTitle}>
+    <Section id="skills" title={sectionTitle} className="print:break-inside-avoid">
       <div className="space-y-4">
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wider text-blue-800 mb-2">

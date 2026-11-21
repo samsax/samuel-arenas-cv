@@ -6,12 +6,11 @@
     "printCV": "Print CV"
   },
   "header": {
-    "location": "La Ceja, Colombia · 8:00 a.m.–5:00 p.m. COT (UTC−5) · Flexible for US Eastern overlap",
+    "location": "La Ceja, Colombia · Flexible for US Eastern overlap",
     "email": "Email",
     "phone": "Phone",
     "linkedin": "LinkedIn",
-    "githubPersonal": "GitHub (Personal)",
-    "githubProfessional": "GitHub (Professional)"
+    "githubPersonal": "GitHub (Personal)"
   },
   "sections": {
     "summary": "Professional Summary",
@@ -19,8 +18,7 @@
     "skills": "Skills",
     "certifications": "Courses & Certificates",
     "education": "Education",
-    "languages": "Languages",
-    "hobbies": "Interests & Hobbies"
+    "languages": "Languages"
   },
   "skills": {
     "nowTitle": "Now",
