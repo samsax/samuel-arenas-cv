@@ -18,8 +18,8 @@ export function GET() {
 
   const experienceBlocks = experience.map((item) =>
     [
-      `### ${item.company}`,
-      `Location: ${item.location}`,
+      `### ${item.company.en}`,
+      `Location: ${item.location.en}`,
       ...roleLines(item.roles),
       ...(item.overview ? ['', item.overview.en] : []),
       '',

@@ -28,11 +28,11 @@ export function Experience({ locale }: ExperienceProps) {
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
                 <div>
                   <h3 className="text-lg font-bold text-zinc-900">
-                    {exp.company}
+                    {isEs ? exp.company.es : exp.company.en}
                   </h3>
                 </div>
                 <span className="text-xs sm:text-sm text-zinc-500 font-medium">
-                  {exp.location}
+                  {isEs ? exp.location.es : exp.location.en}
                 </span>
               </div>
 

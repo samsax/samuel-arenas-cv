@@ -50,7 +50,7 @@ export function generateJsonLd(locale: string) {
         },
         worksFor: {
           '@type': 'Organization',
-          name: currentJob.company,
+          name: isEs ? currentJob.company.es : currentJob.company.en,
         },
         hasCredential: certifications.map((cert) => ({
           '@type': 'EducationalOccupationalCredential',

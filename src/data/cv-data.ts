@@ -20,8 +20,11 @@ export const cvData: CVData = {
 
   experience: [
     {
-      company: 'FullStack Labs (Remote, USA Contractor)',
-      location: 'Remote (USA / Colombia)',
+      company: {
+        en: 'FullStack Labs (Remote, USA Contractor)',
+        es: 'FullStack Labs (Remoto, contratista de EE. UU.)',
+      },
+      location: { en: 'Remote (USA / Colombia)', es: 'Remoto (EE. UU. / Colombia)' },
       roles: [
         {
           title: {
@@ -64,8 +67,8 @@ export const cvData: CVData = {
       },
     },
     {
-      company: 'DataHome, S. de R.L. de C.V.',
-      location: 'Villahermosa, Tabasco, México',
+      company: { en: 'DataHome, S. de R.L. de C.V.', es: 'DataHome, S. de R.L. de C.V.' },
+      location: { en: 'Villahermosa, Tabasco, México', es: 'Villahermosa, Tabasco, México' },
       roles: [
         {
           title: {
