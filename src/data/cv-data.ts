@@ -4,8 +4,8 @@ export const cvData: CVData = {
   personal: {
     fullName: 'Samuel David Arenas Pareja',
     title: {
-      en: 'Senior Software Engineer',
-      es: 'Ingeniero de Software Senior',
+      en: 'Senior Full-Stack Engineer',
+      es: 'Ingeniero Full-Stack Senior',
     },
     email: 'samuelsaxofon@gmail.com',
     phone: '+57 3017463071',
@@ -14,8 +14,8 @@ export const cvData: CVData = {
   },
 
   summary: {
-    en: 'Senior software engineer with 10 years of experience, including 3 years of React, contracted through FullStack Labs to a construction-technology platform. Promoted from mid-level to senior in April 2024. I work on company and project home for construction teams, first on the platform’s onboarding services and, since June 2025, on its home pages.',
-    es: 'Ingeniero de software sénior con 10 años de experiencia, 3 de ellos con React, contratado a través de FullStack Labs para una plataforma de tecnología para la construcción. Ascendí de nivel intermedio a sénior en abril de 2024. Trabajo en las páginas de inicio de empresa y proyecto para equipos de construcción: primero en los servicios de onboarding de la plataforma y, desde junio de 2025, en sus páginas de inicio.',
+    en: 'Senior full-stack engineer with 10 years of experience. Contracted through FullStack Labs since 2022 to a US construction-tech SaaS platform, where I have built microservices throughout and its React and TypeScript frontend for the last 3 years. Promoted to senior in April 2024. I now build the home pages construction teams use to manage their companies and projects, end to end across React, Node.js/NestJS, and Ruby on Rails.',
+    es: 'Ingeniero full-stack sénior con 10 años de experiencia. Desde 2022 trabajo contratado a través de FullStack Labs para una plataforma SaaS estadounidense de tecnología para la construcción, donde he desarrollado microservicios durante todo ese tiempo y su frontend con React y TypeScript en los últimos 3 años. Ascendí a sénior en abril de 2024. Hoy desarrollo de extremo a extremo las páginas de inicio que los equipos de construcción usan para gestionar sus empresas y proyectos, con React, Node.js/NestJS y Ruby on Rails.',
   },
 
   experience: [

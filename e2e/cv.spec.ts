@@ -8,7 +8,7 @@ test.describe('English page', () => {
 
   test('is served in English with the right title and language', async ({ page }) => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-    await expect(page).toHaveTitle('Samuel David Arenas Pareja | Senior Software Engineer');
+    await expect(page).toHaveTitle('Samuel David Arenas Pareja | Senior Full-Stack Engineer');
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(cvData.personal.fullName);
   });
 
