@@ -129,8 +129,22 @@ pnpm typecheck
 - **What is covered:** the CV data, messages, JSON-LD, metadata, sitemap, `/llms.txt`, the locale layout (404 for unknown locales) and the CV components in both languages.
 - **Guards:** tests fail if the public copy names the client or its internal products, shows exact work hours or the professional GitHub account, has English and Spanish out of sync, uses a non-ISO date, or lists a current skill that no experience bullet mentions. When a failure is intended, for example a deliberate content change, update the test in the same commit.
 - **Conventions:** tests sit next to the code they cover as `*.test.ts(x)`. Data, lib and route tests run in Node; component tests start with `// @vitest-environment jsdom`.
-- **Not covered:** async Server Components cannot be rendered by Vitest, so `Header` is tested with `next-intl/server` mocked, and the root layout is not rendered. The PDFs are binary files and are not compared with the page, so run `pnpm pdf` after any copy change.
-- **CI:** `.github/workflows/ci.yml` runs lint, typecheck, test and build on every pull request and on pushes to `master`, using Node 24 and the pnpm version from `package.json`.
+- **Not covered by unit tests:** async Server Components cannot be rendered by Vitest, so `Header` is tested with `next-intl/server` mocked. The end-to-end suite covers the full page instead.
+- **CI:** `.github/workflows/ci.yml` runs lint, typecheck, build, unit tests and end-to-end tests on every pull request and on pushes to `master`, using Node 24 and the pnpm version from `package.json`. On failure it uploads the Playwright report.
+
+### End-to-end tests (Playwright)
+
+```bash
+pnpm e2e          # build the site, then run every e2e test (desktop and mobile Chromium)
+pnpm e2e:ui       # the same, in Playwright's interactive UI
+pnpm exec playwright test e2e/accessibility.spec.ts   # one file
+```
+
+- **How it runs:** `playwright.config.ts` starts `pnpm start` on port 3460 against the production build, so `pnpm build` must have run first (`pnpm e2e` does this). Set `E2E_BASE_URL` to test a deployed site instead, for example a Vercel preview.
+- **What is covered:** the English and Spanish pages (headings, summary, employers, certificates, interests, language switch, links), the PDF downloads (served as real PDFs), JSON-LD, print layout, `robots.txt`, `sitemap.xml`, `llms.txt`, unknown paths returning 404, and the root redirect.
+- **Accessibility:** axe-core checks WCAG 2.1 A and AA on both pages and fails on serious or critical violations. A keyboard test confirms the language switch is reached within 10 Tab presses, and another confirms the PDF link can receive focus. Both pages also have exactly one `h1` and the nav, main and footer landmarks.
+- **Layout:** the mobile project runs the same tests on a Pixel 7 viewport, and one test checks for horizontal scrolling.
+- **Reports:** failures keep a trace (`trace: retain-on-failure`). Output goes to `playwright-report/` and `test-results/`, both git-ignored.
 
 ---
 
