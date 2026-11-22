@@ -103,14 +103,14 @@ export const cvData: CVData = {
         en: [
           'As technical lead of a four-person team, owned architecture and code review across Android, web, and backend, and reorganized the PHP web services from one large file into a multi-file Zend Framework backend.',
           'Built the Android app for drivers and passengers, first in Java and later in Kotlin; developed the trip-platform dashboard with Vue.js and PostgreSQL.',
-          'Led the architecture of a driver’s license system for the state of Tabasco and worked directly with the state government on its implementation: a secure connection to government records and a mobile app that replaced the physical license and handled renewal payments.',
-          'Designed and built an online vehicle store with inventory where buyers applied for credit with one of México’s largest banks through its API; sales closed in person.',
+          'Led the architecture of a driver’s license system for the state of Tabasco and worked directly with the state government on its implementation: a secure connection to government records, a Kotlin Android app that replaced the physical license and handled renewal payments, and a Django and Vue.js dashboard.',
+          'Designed and built an online vehicle store (Django, Vue.js) with inventory where buyers applied for credit with one of México’s largest banks through its API; sales closed in person.',
         ],
         es: [
           'Como líder técnico de un equipo de cuatro personas, definí la arquitectura y revisé el código de Android, web y backend, y reorganicé los servicios web en PHP, de un único archivo extenso a un backend de Zend Framework con múltiples archivos.',
           'Desarrollé la aplicación Android para conductores y pasajeros, primero en Java y luego en Kotlin; desarrollé el dashboard de la plataforma de viajes con Vue.js y PostgreSQL.',
-          'Lideré la arquitectura de un sistema de licencias de conducir para Tabasco y trabajé directamente con el gobierno estatal: conexión segura con sus datos y una app móvil que reemplazaba la licencia física y cobraba la renovación.',
-          'Diseñé la arquitectura y desarrollé una tienda en línea de vehículos con inventario, donde los compradores solicitaban crédito con uno de los bancos más grandes de México a través de su API; la venta se cerraba de forma presencial.',
+          'Lideré la arquitectura del sistema de licencias de conducir de Tabasco y trabajé directamente con el gobierno estatal: conexión segura con sus datos, app Android en Kotlin que reemplazaba la licencia física y cobraba la renovación, y dashboard en Django y Vue.js.',
+          'Diseñé y desarrollé una tienda en línea de vehículos (Django, Vue.js) con inventario, donde los compradores solicitaban crédito a uno de los bancos más grandes de México vía su API; la venta se cerraba en persona.',
         ],
       },
     },
@@ -137,7 +137,7 @@ export const cvData: CVData = {
       'Claude Code',
       'GitHub Copilot',
     ],
-    earlier: ['Kotlin', 'Java/Android', 'Vue.js', 'PostgreSQL', 'PHP'],
+    earlier: ['Kotlin', 'Java/Android', 'Vue.js', 'Django', 'PostgreSQL', 'PHP'],
   },
 
   certifications: [
@@ -157,8 +157,8 @@ export const cvData: CVData = {
     startDate: '2012-03',
     endDate: '2017-09',
     note: {
-      en: 'Research assistant at GIIS (UdeA): built “MyVitalBox: Nutrición”, an Android nutrition-tracking app with Java and SQLite.',
-      es: 'Asistente de investigación en GIIS (UdeA): desarrollé “MyVitalBox: Nutrición”, una app Android de seguimiento nutricional con Java y SQLite.',
+      en: 'Research assistant at GIIS (UdeA): built “MyVitalBox: Nutrición”, an Android nutrition-tracking app with Java and SQLite. Took my final course online during the DataHome internship.',
+      es: 'Asistente de investigación en GIIS (UdeA): desarrollé “MyVitalBox: Nutrición”, app Android de nutrición (Java, SQLite). Cursé la última materia en línea durante la práctica en DataHome.',
     },
   },
 

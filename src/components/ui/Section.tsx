@@ -9,7 +9,7 @@ interface SectionProps {
 
 export function Section({ id, title, children, className = '' }: SectionProps) {
   return (
-    <section id={id} aria-label={title} className={`mb-10 print:mb-4 ${className}`}>
+    <section id={id} aria-label={title} className={`mb-10 print:mb-3 ${className}`}>
       <h2 className="text-xl sm:text-2xl font-bold text-blue-700 tracking-tight border-b-2 border-blue-600 pb-1.5 mb-5 print:mb-3 print:break-after-avoid flex items-center justify-between">
         <span>{title}</span>
       </h2>
