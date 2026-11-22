@@ -8,7 +8,7 @@
 
 @media print {
   html {
-    /* Keep the CV at two pages now that certificates are back. */
+    /* Keep the CV at two pages (EN and ES); recheck page count after copy changes. */
     zoom: 0.85;
   }
   .no-print {
