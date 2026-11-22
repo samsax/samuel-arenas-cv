@@ -38,15 +38,24 @@ describe('Header', () => {
     expect(container.textContent).not.toMatch(/COT/);
   });
 
-  it('links email, LinkedIn and the personal GitHub only', async () => {
+  it('links email, the online CV, LinkedIn and the personal GitHub only', async () => {
     render(await Header({ locale: 'en' }));
     const hrefs = screen.getAllByRole('link').map((link) => link.getAttribute('href'));
     expect(hrefs).toEqual([
       `mailto:${cvData.personal.email}`,
+      'https://samuel-arenas-cv.vercel.app/en',
       cvData.personal.linkedin,
       cvData.personal.githubPersonal,
     ]);
     expect(screen.queryByText(/Professional\)/)).toBeNull();
+  });
+
+  it('shows the online CV link only when printed, in the page locale', async () => {
+    render(await Header({ locale: 'es' }));
+    const link = screen.getByRole('link', { name: /Versión actualizada/ });
+    expect(link.getAttribute('href')).toBe('https://samuel-arenas-cv.vercel.app/es');
+    expect(link.className).toMatch(/\bhidden\b/);
+    expect(link.className).toMatch(/print:inline-flex/);
   });
 
   it('opens external profiles safely in a new tab', async () => {
