@@ -19,17 +19,17 @@ vi.mock('next-intl/server', async () => {
 afterEach(cleanup);
 
 describe('Header', () => {
-  it('shows the name, English title and flexible-hours location', async () => {
+  it('shows the name, English title and US Eastern hours location', async () => {
     render(await Header({ locale: 'en' }));
     expect(screen.getByRole('heading', { level: 1, name: cvData.personal.fullName })).toBeTruthy();
     expect(screen.getByText(cvData.personal.title.en)).toBeTruthy();
-    expect(screen.getByText(/La Ceja, Colombia · Flexible for US Eastern overlap/)).toBeTruthy();
+    expect(screen.getByText(/La Ceja, Colombia \(UTC−5\) · Works US Eastern hours/)).toBeTruthy();
   });
 
   it('shows the Spanish title and location', async () => {
     render(await Header({ locale: 'es' }));
     expect(screen.getByText(cvData.personal.title.es)).toBeTruthy();
-    expect(screen.getByText(/Flexibilidad para coincidir con el horario del Este de EE\. UU\./)).toBeTruthy();
+    expect(screen.getByText(/Trabajo en horario del Este de EE\. UU\./)).toBeTruthy();
   });
 
   it('never shows exact work hours', async () => {
@@ -38,12 +38,11 @@ describe('Header', () => {
     expect(container.textContent).not.toMatch(/COT/);
   });
 
-  it('links email, phone, LinkedIn and the personal GitHub only', async () => {
+  it('links email, LinkedIn and the personal GitHub only', async () => {
     render(await Header({ locale: 'en' }));
     const hrefs = screen.getAllByRole('link').map((link) => link.getAttribute('href'));
     expect(hrefs).toEqual([
       `mailto:${cvData.personal.email}`,
-      `tel:${cvData.personal.phone.replace(/\s+/g, '')}`,
       cvData.personal.linkedin,
       cvData.personal.githubPersonal,
     ]);

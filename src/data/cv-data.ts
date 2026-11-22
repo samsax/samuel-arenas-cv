@@ -8,7 +8,6 @@ export const cvData: CVData = {
       es: 'Ingeniero Full-Stack Senior',
     },
     email: 'samuelsaxofon@gmail.com',
-    phone: '+57 3017463071',
     linkedin: 'https://www.linkedin.com/in/samuel-arenas-pareja',
     githubPersonal: 'https://github.com/samsax',
   },
@@ -20,11 +19,8 @@ export const cvData: CVData = {
 
   experience: [
     {
-      company: {
-        en: 'FullStack Labs (Remote, USA Contractor)',
-        es: 'FullStack Labs (Remoto, contratista de EE. UU.)',
-      },
-      location: { en: 'Remote (USA / Colombia)', es: 'Remoto (EE. UU. / Colombia)' },
+      company: { en: 'FullStack Labs', es: 'FullStack Labs' },
+      location: { en: 'Remote from Colombia · US client', es: 'Remoto desde Colombia · Cliente de EE. UU.' },
       roles: [
         {
           title: {
@@ -44,8 +40,8 @@ export const cvData: CVData = {
         },
       ],
       overview: {
-        en: 'From 2022 to mid-2025 I was on the onboarding team, working on account provisioning, entitlements (which paid modules each customer can use), and new-customer setup, built as TypeScript/NestJS microservices on AWS and, from late 2023, React frontends. Since June 2025 I have been on the home team, building company and project home pages across the home UI, its microservice, and the platform’s Rails monolith. I use Cursor, Claude Code, and GitHub Copilot day to day.',
-        es: 'De 2022 a mediados de 2025 estuve en el equipo de onboarding, trabajando en el aprovisionamiento de cuentas, las habilitaciones de módulos (entitlements, qué módulos de pago puede usar cada cliente) y la configuración de clientes nuevos, con microservicios en TypeScript/NestJS sobre AWS y, desde finales de 2023, frontends en React. Desde junio de 2025 estoy en el equipo de páginas de inicio y desarrollo páginas de inicio de empresa y proyecto en la interfaz de inicio, su microservicio y el monolito de Rails de la plataforma. Uso Cursor, Claude Code y GitHub Copilot a diario.',
+        en: 'From 2022 to mid-2025 I was on the onboarding team, working on account provisioning, entitlements (which paid modules each customer can use), and new-customer setup, built as TypeScript/NestJS microservices on AWS and, from late 2023, React frontends. Since June 2025 I have been on the home team, building company and project home pages across the home UI, its microservice, and the platform’s Rails monolith. I use Claude Code, Cursor, and GitHub Copilot daily and share Claude Code skills with the team.',
+        es: 'De 2022 a mediados de 2025 estuve en el equipo de onboarding, trabajando en el aprovisionamiento de cuentas, las habilitaciones de módulos (entitlements, qué módulos de pago puede usar cada cliente) y la configuración de clientes nuevos, con microservicios en TypeScript/NestJS sobre AWS y, desde finales de 2023, frontends en React. Desde junio de 2025 estoy en el equipo de páginas de inicio y desarrollo páginas de inicio de empresa y proyecto en la interfaz de inicio, su microservicio y el monolito de Rails de la plataforma. Uso Claude Code, Cursor y GitHub Copilot a diario y comparto skills de Claude Code con el equipo.',
       },
       achievements: {
         en: [
@@ -145,23 +141,11 @@ export const cvData: CVData = {
   },
 
   certifications: [
-    { name: 'Curso de Bitcoin y Blockchain 2017', issuer: 'Platzi', issuedAt: '2020-08' },
-    { name: 'Curso Profesional de Scrum', issuer: 'Platzi', issuedAt: '2020-09' },
-    {
-      name: 'Curso de Introducción a los Negocios Online en Ecommerce',
-      issuer: 'Platzi',
-      issuedAt: '2020-09',
-    },
-    { name: 'Curso de Gestión de Equipos Ágiles', issuer: 'Platzi', issuedAt: '2020-10' },
-    { name: 'Curso de Design Sprint Aplicado', issuer: 'Platzi', issuedAt: '2020-10' },
-    { name: 'Curso de Liderazgo para Equipos de Trabajo', issuer: 'Platzi', issuedAt: '2021-01' },
-    { name: 'Curso de Técnicas de Negociación', issuer: 'Platzi', issuedAt: '2021-03' },
     { name: 'Claude Code in Action', issuer: 'Anthropic', issuedAt: '2026-05' },
-    {
-      name: 'Certificate of completion: Introduction to agent skills',
-      issuer: 'Anthropic',
-      issuedAt: '2026-04',
-    },
+    { name: 'Introduction to agent skills', issuer: 'Anthropic', issuedAt: '2026-04' },
+    { name: 'Curso de Liderazgo para Equipos de Trabajo', issuer: 'Platzi', issuedAt: '2021-01' },
+    { name: 'Curso de Gestión de Equipos Ágiles', issuer: 'Platzi', issuedAt: '2020-10' },
+    { name: 'Curso Profesional de Scrum', issuer: 'Platzi', issuedAt: '2020-09' },
   ],
 
   education: {
