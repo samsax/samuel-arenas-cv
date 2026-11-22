@@ -100,17 +100,21 @@ export const cvData: CVData = {
         },
       ],
       overview: {
-        en: 'DataHome provided software and infrastructure for a trip service used by drivers, passengers, and transport companies, earning a small fee per trip.',
-        es: 'DataHome ofrecía software e infraestructura para un servicio de transporte usado por conductores, pasajeros y empresas de transporte, y cobraba una pequeña comisión por viaje.',
+        en: 'DataHome built software and infrastructure for clients in México, including a trip service used by drivers, passengers, and transport companies (earning a small fee per trip), an online vehicle store with bank financing, and a state driver’s license system.',
+        es: 'DataHome desarrollaba software e infraestructura para clientes en México, entre ellos un servicio de transporte usado por conductores, pasajeros y empresas de transporte (con una pequeña comisión por viaje), una tienda en línea de vehículos con financiamiento bancario y un sistema estatal de licencias de conducir.',
       },
       achievements: {
         en: [
+          'As technical lead of a four-person team, owned architecture and code review across Android, web, and backend, and reorganized the PHP web services from one large file into a multi-file Zend Framework backend.',
           'Built the Android app for drivers and passengers, first in Java and later in Kotlin; developed the trip-platform dashboard with Vue.js and PostgreSQL.',
-          'Reorganized the PHP web-service logic from one large file into a multi-file Zend Framework backend; made technical decisions on a four-person team.',
+          'Built a driver’s license system for the state of Tabasco: a secure connection to state government records and a mobile app that replaced the physical license and let drivers pay for renewals directly.',
+          'Built an online vehicle store with inventory management where buyers uploaded documents and answered a questionnaire to apply for credit directly with one of México’s largest banks through its API; sales closed in person.',
         ],
         es: [
+          'Como líder técnico de un equipo de cuatro personas, definí la arquitectura y revisé el código de Android, web y backend, y reorganicé los servicios web en PHP, de un único archivo extenso a un backend de Zend Framework con múltiples archivos.',
           'Desarrollé la aplicación Android para conductores y pasajeros, primero en Java y luego en Kotlin; desarrollé el dashboard de la plataforma de viajes con Vue.js y PostgreSQL.',
-          'Reorganicé la lógica de servicios web en PHP, de un único archivo extenso a un backend de Zend Framework con múltiples archivos; tomé decisiones técnicas en un equipo de cuatro personas.',
+          'Desarrollé un sistema de licencias de conducir para el estado de Tabasco: una conexión segura con la información del gobierno estatal y una aplicación móvil que reemplazaba la licencia física y permitía pagar la renovación directamente.',
+          'Desarrollé una tienda en línea de vehículos con sistema de inventario, donde los clientes subían su documentación y respondían un cuestionario para solicitar crédito directamente con uno de los bancos más grandes de México a través de su API; la venta se cerraba de forma presencial.',
         ],
       },
     },
