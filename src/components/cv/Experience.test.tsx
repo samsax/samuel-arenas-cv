@@ -11,7 +11,7 @@ describe('Experience', () => {
   it('shows each employer with localized role dates in English', () => {
     render(<Experience locale="en" />);
     expect(screen.getByRole('heading', { name: 'Professional Experience' })).toBeTruthy();
-    expect(screen.getByRole('heading', { name: 'FullStack Labs (Remote, USA Contractor)' })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'FullStack Labs' })).toBeTruthy();
     expect(screen.getByRole('heading', { name: 'DataHome, S. de R.L. de C.V.' })).toBeTruthy();
     expect(screen.getByText('Apr 2024 – Present')).toBeTruthy();
     expect(screen.getByText('Jan 2022 – Apr 2024')).toBeTruthy();

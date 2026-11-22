@@ -32,13 +32,6 @@ export async function Header({ locale }: HeaderProps) {
         >
           <span>✉️</span> {personal.email}
         </a>
-        <span className="text-zinc-300 hidden sm:inline">•</span>
-        <a
-          href={`tel:${personal.phone.replace(/\s+/g, '')}`}
-          className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
-        >
-          <span>📞</span> {personal.phone}
-        </a>
       </div>
 
       <div className="mt-3 flex flex-wrap justify-center items-center gap-3 text-sm">

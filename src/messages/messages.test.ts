@@ -27,8 +27,8 @@ describe('messages', () => {
     }
   });
 
-  it('keeps the flexible US Eastern overlap wording in the header location', () => {
-    expect(en.header.location).toBe('La Ceja, Colombia · Flexible for US Eastern overlap');
+  it('states US Eastern working hours in the header location', () => {
+    expect(en.header.location).toBe('La Ceja, Colombia (UTC−5) · Works US Eastern hours');
     expect(es.header.location).toContain('La Ceja, Colombia');
     expect(es.header.location).toContain('Este de EE. UU.');
   });

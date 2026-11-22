@@ -24,9 +24,9 @@ test.describe('English page', () => {
     ]);
   });
 
-  test('shows the summary and the flexible-hours location', async ({ page }) => {
+  test('shows the summary and the US Eastern hours location', async ({ page }) => {
     await expect(page.getByText(cvData.summary.en)).toBeVisible();
-    await expect(page.getByText('Flexible for US Eastern overlap')).toBeVisible();
+    await expect(page.getByText('Works US Eastern hours')).toBeVisible();
   });
 
   test('shows the employer, both titles and the current role', async ({ page }) => {
@@ -54,12 +54,13 @@ test.describe('English page', () => {
     await expect(page.getByRole('heading', { name: 'Resumen Profesional' })).toBeVisible();
   });
 
-  test('links to the email, phone, LinkedIn and personal GitHub only', async ({ page }) => {
+  test('links to the email, LinkedIn and personal GitHub only, with no phone', async ({ page }) => {
     const main = page.locator('main');
     await expect(main.locator(`a[href="mailto:${cvData.personal.email}"]`)).toBeVisible();
     await expect(main.locator(`a[href="${cvData.personal.linkedin}"]`)).toBeVisible();
     await expect(main.locator(`a[href="${cvData.personal.githubPersonal}"]`)).toBeVisible();
     await expect(page.locator('a[href*="samuelfsl"]')).toHaveCount(0);
+    await expect(page.locator('a[href^="tel:"]')).toHaveCount(0);
   });
 
   test('offers a PDF download that is served as a real PDF', async ({ page, request }) => {

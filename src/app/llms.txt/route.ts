@@ -4,7 +4,7 @@ import { formatMonthYear } from '@/lib/format-date';
 export const dynamic = 'force-static';
 
 const BASE_URL = 'https://samuel-arenas-cv.vercel.app';
-const LOCATION = 'La Ceja, Antioquia, Colombia (UTC−5, flexible for US Eastern overlap)';
+const LOCATION = 'La Ceja, Antioquia, Colombia (UTC−5, works US Eastern hours)';
 
 // Built from the same data as the page so the file cannot drift from the CV.
 export function GET() {
@@ -36,7 +36,6 @@ export function GET() {
     '## Contact',
     `- Location: ${LOCATION}`,
     `- Email: ${personal.email}`,
-    `- Phone: ${personal.phone}`,
     `- LinkedIn: ${personal.linkedin}`,
     `- GitHub: ${personal.githubPersonal}`,
     `- Web: ${BASE_URL}/en (English), ${BASE_URL}/es (Spanish)`,

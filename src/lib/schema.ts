@@ -31,7 +31,6 @@ export function generateJsonLd(locale: string) {
         jobTitle: isEs ? personal.title.es : personal.title.en,
         description: isEs ? summary.es : summary.en,
         email: `mailto:${personal.email}`,
-        telephone: personal.phone,
         url: `${BASE_URL}/${locale}`,
         address: {
           '@type': 'PostalAddress',
