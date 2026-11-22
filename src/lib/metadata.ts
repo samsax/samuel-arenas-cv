@@ -22,7 +22,7 @@ export function generateMetadata(locale: string): Metadata {
       'Apache Kafka',
       'Colombia',
       'Remote Engineer',
-      'WCAG 2.1 Accessibility',
+      'Accessibility',
     ],
     authors: [{ name: personal.fullName, url: personal.linkedin }],
     creator: personal.fullName,
