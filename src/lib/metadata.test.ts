@@ -29,9 +29,10 @@ describe('generateMetadata', () => {
     expect(generateMetadata('en').robots).toEqual({ index: true, follow: true });
   });
 
-  it('includes Next.js and leaves the client name out of the keywords', () => {
+  it('includes the core stack and leaves the client name out of the keywords', () => {
     const keywords = generateMetadata('en').keywords as string[];
-    expect(keywords).toContain('Next.js');
+    expect(keywords).toEqual(expect.arrayContaining(['React', 'NestJS', 'Ruby on Rails']));
+    expect(keywords).not.toContain('Next.js');
     expect(keywords.join(' ')).not.toMatch(/procore/i);
   });
 
