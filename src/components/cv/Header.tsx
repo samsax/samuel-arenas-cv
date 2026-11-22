@@ -1,6 +1,7 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import { cvData } from '@/data/cv-data';
+import { BASE_URL } from '@/lib/metadata';
 
 interface HeaderProps {
   locale: string;
@@ -35,6 +36,13 @@ export async function Header({ locale }: HeaderProps) {
       </div>
 
       <div className="mt-3 flex flex-wrap justify-center items-center gap-3 text-sm">
+        {/* Print-only: points PDF readers to the always-current online version. */}
+        <a
+          href={`${BASE_URL}/${locale}`}
+          className="hidden print:inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-700 font-medium border border-zinc-200"
+        >
+          <span>🌐</span> {t('website')}: {BASE_URL.replace('https://', '')}
+        </a>
         <a
           href={personal.linkedin}
           target="_blank"

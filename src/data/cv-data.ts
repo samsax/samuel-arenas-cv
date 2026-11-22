@@ -141,6 +141,7 @@ export const cvData: CVData = {
   },
 
   certifications: [
+    { name: 'Introduction to Model Context Protocol', issuer: 'Anthropic', issuedAt: '2026-11' },
     { name: 'Claude Code in Action', issuer: 'Anthropic', issuedAt: '2026-05' },
     { name: 'Introduction to agent skills', issuer: 'Anthropic', issuedAt: '2026-04' },
     { name: 'Curso de Liderazgo para Equipos de Trabajo', issuer: 'Platzi', issuedAt: '2021-01' },
