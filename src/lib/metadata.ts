@@ -19,6 +19,7 @@ export function generateMetadata(locale: string): Metadata {
       'React',
       'NestJS',
       'Ruby on Rails',
+      'Python',
       'Apache Kafka',
       'Colombia',
       'Remote Engineer',
