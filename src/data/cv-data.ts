@@ -107,14 +107,14 @@ export const cvData: CVData = {
         en: [
           'As technical lead of a four-person team, owned architecture and code review across Android, web, and backend, and reorganized the PHP web services from one large file into a multi-file Zend Framework backend.',
           'Built the Android app for drivers and passengers, first in Java and later in Kotlin; developed the trip-platform dashboard with Vue.js and PostgreSQL.',
-          'Built a driver’s license system for the state of Tabasco: a secure connection to state government records and a mobile app that replaced the physical license and let drivers pay for renewals directly.',
-          'Built an online vehicle store with inventory management where buyers uploaded documents and answered a questionnaire to apply for credit directly with one of México’s largest banks through its API; sales closed in person.',
+          'Led the architecture of a driver’s license system for the state of Tabasco and worked directly with the state government on its implementation: a secure connection to state government records and a mobile app that replaced the physical license and let drivers pay for renewals directly.',
+          'Designed the architecture of and built an online vehicle store with inventory management where buyers uploaded documents and answered a questionnaire to apply for credit directly with one of México’s largest banks through its API; sales closed in person.',
         ],
         es: [
           'Como líder técnico de un equipo de cuatro personas, definí la arquitectura y revisé el código de Android, web y backend, y reorganicé los servicios web en PHP, de un único archivo extenso a un backend de Zend Framework con múltiples archivos.',
           'Desarrollé la aplicación Android para conductores y pasajeros, primero en Java y luego en Kotlin; desarrollé el dashboard de la plataforma de viajes con Vue.js y PostgreSQL.',
-          'Desarrollé un sistema de licencias de conducir para el estado de Tabasco: una conexión segura con la información del gobierno estatal y una aplicación móvil que reemplazaba la licencia física y permitía pagar la renovación directamente.',
-          'Desarrollé una tienda en línea de vehículos con sistema de inventario, donde los clientes subían su documentación y respondían un cuestionario para solicitar crédito directamente con uno de los bancos más grandes de México a través de su API; la venta se cerraba de forma presencial.',
+          'Lideré la arquitectura de un sistema de licencias de conducir para el estado de Tabasco y trabajé directamente con el gobierno estatal en su implementación: una conexión segura con la información del gobierno estatal y una aplicación móvil que reemplazaba la licencia física y permitía pagar la renovación directamente.',
+          'Diseñé la arquitectura y desarrollé una tienda en línea de vehículos con sistema de inventario, donde los clientes subían su documentación y respondían un cuestionario para solicitar crédito directamente con uno de los bancos más grandes de México a través de su API; la venta se cerraba de forma presencial.',
         ],
       },
     },
