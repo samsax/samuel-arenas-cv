@@ -9,7 +9,7 @@
 @media print {
   html {
     /* Keep the CV at two pages now that certificates are back. */
-    zoom: 0.88;
+    zoom: 0.85;
   }
   .no-print {
     display: none !important;
