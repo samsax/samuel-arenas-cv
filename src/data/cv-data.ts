@@ -13,14 +13,14 @@ export const cvData: CVData = {
   },
 
   summary: {
-    en: 'Senior full-stack engineer with 10 years of experience. Contracted through FullStack Labs since 2022 to a US construction-tech SaaS platform, where I have built microservices throughout and its React and TypeScript frontend for the last 3 years. Promoted to senior in April 2024. I now build the home pages construction teams use to manage their companies and projects, end to end across React, Node.js/NestJS, and Ruby on Rails.',
-    es: 'Ingeniero full-stack sénior con 10 años de experiencia. Desde 2022, a través de FullStack Labs, trabajo para una plataforma SaaS estadounidense de tecnología para la construcción: microservicios desde el inicio y frontend con React y TypeScript en los últimos 3 años. Ascendí a sénior en abril de 2024. Hoy desarrollo de extremo a extremo las páginas de inicio de empresas y proyectos con React, Node.js/NestJS y Ruby on Rails.',
+    en: 'Senior full-stack engineer with 10 years of experience. Contracted through FullStack Labs since 2022 to Procore, a US construction-tech SaaS platform, where I have built microservices throughout and its React and TypeScript frontend for the last 3 years. Promoted to senior in April 2024. I now build the home pages construction teams use to manage their companies and projects, end to end across React, Node.js/NestJS, and Ruby on Rails.',
+    es: 'Ingeniero full-stack sénior con 10 años de experiencia. Desde 2022, a través de FullStack Labs, trabajo para Procore, una plataforma SaaS estadounidense de tecnología para la construcción: microservicios desde el inicio y frontend con React y TypeScript en los últimos 3 años. Ascendí a sénior en abril de 2024. Hoy desarrollo de extremo a extremo las páginas de inicio de empresas y proyectos con React, Node.js/NestJS y Ruby on Rails.',
   },
 
   experience: [
     {
       company: { en: 'FullStack Labs', es: 'FullStack Labs' },
-      location: { en: 'Remote from Colombia · US client', es: 'Remoto desde Colombia · Cliente de EE. UU.' },
+      location: { en: 'Remote from Colombia · Procore (US client)', es: 'Remoto desde Colombia · Procore (cliente de EE. UU.)' },
       roles: [
         {
           title: {

@@ -5,7 +5,7 @@ import { cvData } from './cv-data';
 const ISO_YEAR_MONTH = /^\d{4}-(0[1-9]|1[0-2])$/;
 
 describe('cvData public copy', () => {
-  it('does not name the client, internal products, work hours or the professional GitHub account', () => {
+  it('does not name internal products, work hours or the professional GitHub account', () => {
     for (const text of collectStrings(cvData)) {
       expect(findForbiddenTerms(text), text).toEqual([]);
     }
